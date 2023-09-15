@@ -82,6 +82,37 @@
   }
 }
 
+.link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+	color: var(--global-color);
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+		width: 100%;
+		height: 1.5px;
+		border-radius: 5px;
+		background-color: var(--global-color);
+		transition: background-color .3s ease, transform .3s ease;
+	}
+	&:hover {
+		color: var(--font-color);
+		&::before {
+			transform: translateY(-1px);
+			background-color: var(--font-color);
+		}
+	}
+}
+
 .video {
 	display: flex;
 	align-items: center;

@@ -56,7 +56,7 @@
 /***** BLOCKS GLOBAL *****/
 @import "general";
 @import "blocks/buttons";
-// @import "blocks/title";
+@import "blocks/title";
 // @import "blocks/card";
 
 
@@ -76,12 +76,14 @@
 // @import "blocks/plyr";
 // @import "blocks/carousel";
 // @import "blocks/article";
-// @import "blocks/sliders";
+@import "blocks/sliders";
 // @import "blocks/form";
 // @import "blocks/modal";
+@import "blocks/components.scss";
 
 /***** SECTIONS GLOBAL (Widgets) *****/
-
+@import "widgets/hero.scss";
+@import "widgets/recom.scss";
 
 
 @include tablet {
