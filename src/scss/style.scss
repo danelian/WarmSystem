@@ -1,0 +1,206 @@
+/***** FONTS *****/
+@import "fonts";
+
+/***** GENERAL ELEMENTS *****/
+:root {
+  // base
+  --font-family: "Comfortaa", sans-serif;
+  --font-montserrat: "Montserrat-Extrabold", sans-serif;
+
+  --content-width: 1160px;
+  --container-offset: 15px;
+  // --containerMobile-offset: 10px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white-color: #ffffff;
+  --black-color: #131313;
+  --lightBlack-color: #212121;
+  --black-gradient: linear-gradient(114.33deg, #292929 0%, #141414 100%);;
+
+  --font-color: #ECE8E1;
+
+  --darkGreen-color: #172514;
+  --lightGreen-color: #384F33;
+  --green-color: #8BD27C;
+
+  --gold-color: #C9A869;
+  --red-color: #FF3D00;
+
+  --lightGrey-color: #ECECEC;
+  --grey-color: #8E8A83;
+  --darkGrey-color: #4B4B4B;
+
+  --border-radius: 30px;
+  --default-gap: 36px;
+}
+
+/***** Mixins *****/
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin desktop {
+  @media screen and (max-width: 1190px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+
+/***** BLOCKS GLOBAL *****/
+@import "general";
+// @import "blocks/buttons";
+// @import "blocks/title";
+// @import "blocks/card";
+
+
+/***** COMPONENTS GLOBAL *****/
+// @import "blocks/header";
+// @import "blocks/footer";
+// @import "blocks/breadcrumbs";
+// @import "blocks/pagination";
+// @import "blocks/tags";
+// @import "blocks/scroll-container";
+// @import "blocks/accordion";
+// @import "blocks/tabs";
+// @import "blocks/tooltip";
+// @import "blocks/hover-dpd";
+// @import "blocks/click-dpd";
+// @import "blocks/fancybox";
+// @import "blocks/plyr";
+// @import "blocks/carousel";
+// @import "blocks/article";
+// @import "blocks/sliders";
+// @import "blocks/form";
+// @import "blocks/modal";
+
+/***** SECTIONS GLOBAL (Widgets) *****/
+
+
+
+@include tablet {
+  :root {
+    --border-radius: 20px;
+    --default-gap: 24px;
+  }
+}
+@include mobile {
+  :root {
+    --border-radius: 15px;
+    --default-gap: 20px;
+  }
+}
+@media screen and (max-width: 390px) {
+  :root {
+    --container-offset: 10px;
+  }
+}
+
+
+/***** ICONS *****/
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart-check:before {
+  content: "\e919";
+}
+.icon-message:before {
+  content: "\e916";
+}
+.icon-bag2:before {
+  content: "\e90f";
+}
+.icon-eye:before {
+  content: "\e911";
+}
+.icon-filter:before {
+  content: "\e912";
+}
+.icon-gift:before {
+  content: "\e913";
+}
+.icon-grid:before {
+  content: "\e914";
+}
+.icon-download:before {
+  content: "\e910";
+}
+.icon-heart-solid:before {
+  content: "\e915";
+}
+.icon-minus:before {
+  content: "\e917";
+}
+.icon-plus:before {
+  content: "\e918";
+}
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-arrow-big:before {
+  content: "\e901";
+}
+.icon-arrow-down:before {
+  content: "\e902";
+}
+.icon-bag:before {
+  content: "\e903";
+}
+.icon-burger:before {
+  content: "\e904";
+}
+.icon-checked:before {
+  content: "\e905";
+}
+.icon-chevron:before {
+  content: "\e906";
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-compare:before {
+  content: "\e908";
+}
+.icon-heart:before {
+  content: "\e909";
+}
+.icon-repeat:before {
+  content: "\e90a";
+}
+.icon-sign-out:before {
+  content: "\e90b";
+}
+.icon-user:before {
+  content: "\e90c";
+}
+.icon-wallet:before {
+  content: "\e90d";
+}
+.icon-zoom:before {
+  content: "\e90e";
+}
