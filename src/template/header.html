@@ -1,47 +1,35 @@
 <!-- header -->
-<header class="header header-desktop">
-	<div class="container">
-		<div class="header-top">
-			<a href="/" class="logo">Bigmishka</a>
-			<div class="col">
-				<a href="tel:+37255532754" class="header-link">+(372) 5553 2754</a>
-				<a href="mailto:order@mishka.ink" class="header-link">order@mishka.ink</a>
-			</div>
-			<div class="col">
-				<a href="rassrochka.html" class="green-link" data-text="Рассрочка">Рассрочка</a>
-				<a href="studiam-i-masteram.html" class="green-link" data-text="Студиям и мастерам">Студиям и мастерам</a>
-			</div>
-			<div class="header-bar">
-				<div class="lang">
-					<div class="lang-active">
-						<div class="lang-item">EST</div>
-					</div>
-					<div class="lang-dropdown">
-						<div class="lang-item">EST</div>
-						<div class="lang-item">ENG</div>
-					</div>
-				</div>
-				<div class="search-label" id="searchBarLabel">
-					<input class="search-input" id="searchHiddenInput" type="type" placeholder="Поиск" />
-					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-zoom"></i></button>
-				</div>
-				<a href="cart.html" class="btn-icon"><i class="icomoon icon-bag"></i></a>
-				<a href="favorites.html" class="btn-icon"><i class="icomoon icon-heart"></i></a>
-				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
-			</div>
+<header class="header">
+	<div class="container header__container">
+		<a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+		<ul class="nav-menu">
+				<li><a href="#">Главная</a></li>
+				<li class="menu-item-has-children">
+					<a href="#">Каталог</a>
+					<ul class="sub-menu">
+						<li><a href="#">Обогреватели</a></li>
+						<li><a href="#">Очистители</a></li>
+						<li><a href="#">Увлажнители</a></li>
+						<li><a href="#">Осушители</a></li>
+						<li><a href="#">Портативные кондиционеры</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Отзывы</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Контакты</a></li>
+		</ul>
+		<div class="lang">
+			<div class="lang-item"><img src="img/flags/estonia.svg" alt=""></div>
+			<div class="lang-item"><img src="img/flags/usa.svg" alt=""></div>
 		</div>
-		<div class="header-menu">
-			<ul class="nav-list">
-				<li><a href="#">Новинки</a></li>
-				<li><a href="#">Краски</a></li>
-				<li><a href="#">PMU</a></li>
-				<li><a href="#">Картриджи</a></li>
-				<li><a href="#">Чистящие средства</a></li>
-				<li><a href="#">Аксессуары</a></li>
-				<li><a href="#">Мебель</a></li>
-				<li><a href="#">Оборудование</a></li>
-				<li><a href="#">Источники питания</a></li>
-			</ul>
+		<a href="tel:+37256661608" class="header-link">+372 5666 1608</a>
+		<div class="header-bar">
+				<form class="search-label" id="searchBarLabel">
+					<input type="search" class="search-field search-input" placeholder="">
+					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-search"></i></button>
+				</form>
+				<a href="cart.html" class="btn-icon"><i class="icomoon icon-cart"></i></a>
+				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
 		</div>
 	</div>
 </header>

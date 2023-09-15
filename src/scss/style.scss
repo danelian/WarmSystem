@@ -15,24 +15,19 @@
   // colors
   --white-color: #ffffff;
   --black-color: #131313;
-  --lightBlack-color: #212121;
-  --black-gradient: linear-gradient(114.33deg, #292929 0%, #141414 100%);;
+  --lightBlack-color: #292932;
+  --font-color: #131313;
 
-  --font-color: #ECE8E1;
+  --global-color: #E88320;
+  // --green-color: #8BD27C;
+  // --red-color: #FF3D00;
 
-  --darkGreen-color: #172514;
-  --lightGreen-color: #384F33;
-  --green-color: #8BD27C;
+  --lightGrey-color: #F5F6F7;
+  --grey-color: #E5E5E5;
+  // --darkGrey-color: #4B4B4B;
 
-  --gold-color: #C9A869;
-  --red-color: #FF3D00;
-
-  --lightGrey-color: #ECECEC;
-  --grey-color: #8E8A83;
-  --darkGrey-color: #4B4B4B;
-
-  --border-radius: 30px;
-  --default-gap: 36px;
+  --border-radius: 15px;
+  // --default-gap: 36px;
 }
 
 /***** Mixins *****/
@@ -60,13 +55,13 @@
 
 /***** BLOCKS GLOBAL *****/
 @import "general";
-// @import "blocks/buttons";
+@import "blocks/buttons";
 // @import "blocks/title";
 // @import "blocks/card";
 
 
 /***** COMPONENTS GLOBAL *****/
-// @import "blocks/header";
+@import "blocks/header";
 // @import "blocks/footer";
 // @import "blocks/breadcrumbs";
 // @import "blocks/pagination";
@@ -109,8 +104,6 @@
 
 
 /***** ICONS *****/
-
-
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -126,81 +119,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cart-check:before {
-  content: "\e919";
-}
-.icon-message:before {
-  content: "\e916";
-}
-.icon-bag2:before {
-  content: "\e90f";
-}
-.icon-eye:before {
-  content: "\e911";
-}
-.icon-filter:before {
-  content: "\e912";
-}
-.icon-gift:before {
-  content: "\e913";
-}
-.icon-grid:before {
-  content: "\e914";
-}
-.icon-download:before {
-  content: "\e910";
-}
-.icon-heart-solid:before {
-  content: "\e915";
-}
-.icon-minus:before {
-  content: "\e917";
-}
-.icon-plus:before {
-  content: "\e918";
-}
-.icon-arrow:before {
+.icon-arrow-next:before {
   content: "\e900";
 }
-.icon-arrow-big:before {
+.icon-arrow-prev:before {
   content: "\e901";
 }
-.icon-arrow-down:before {
+.icon-cart:before {
   content: "\e902";
 }
-.icon-bag:before {
+.icon-checked:before {
   content: "\e903";
 }
-.icon-burger:before {
+.icon-chevron:before {
   content: "\e904";
 }
-.icon-checked:before {
+.icon-chevron-big:before {
   content: "\e905";
 }
-.icon-chevron:before {
+.icon-download:before {
   content: "\e906";
 }
-.icon-close:before {
+.icon-remove:before {
   content: "\e907";
 }
-.icon-compare:before {
+.icon-search:before {
   content: "\e908";
 }
-.icon-heart:before {
+.icon-user:before {
   content: "\e909";
 }
-.icon-repeat:before {
-  content: "\e90a";
-}
-.icon-sign-out:before {
-  content: "\e90b";
-}
-.icon-user:before {
-  content: "\e90c";
-}
 .icon-wallet:before {
-  content: "\e90d";
-}
-.icon-zoom:before {
-  content: "\e90e";
+  content: "\e90a";
 }
