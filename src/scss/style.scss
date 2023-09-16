@@ -86,18 +86,14 @@
 @import "widgets/recom.scss";
 @import "widgets/benefits.scss";
 @import "widgets/popular.scss";
+@import "widgets/catbl.scss";
+@import "widgets/special.scss";
 
 
 @include tablet {
   :root {
-    --border-radius: 20px;
+    // --border-radius: 20px;
     --default-gap: 24px;
-  }
-}
-@include mobile {
-  :root {
-    --border-radius: 15px;
-    --default-gap: 20px;
   }
 }
 @media screen and (max-width: 390px) {

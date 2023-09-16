@@ -26,12 +26,18 @@
       justify-content: space-between;
       width: 100%;
     }
+    &:hover {
+      .card-name {
+        color: var(--global-color);
+      }
+    }
   }
   &-name {
     font-weight: 400;
     font-size: 17px;
     line-height: 1.2;
     color: var(--font-color);
+    transition: color .3s ease;
   }
   &-text {
     margin-top: 20px;

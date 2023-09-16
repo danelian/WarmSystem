@@ -10,10 +10,15 @@
 // 	margin-bottom: 48px;
 // }
 .section-text {
+	margin-top: 0;
+	margin-bottom: 0;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.2;
 	color: var(--font-color);
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 }
 
 .default-wrapper {
