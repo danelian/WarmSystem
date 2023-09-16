@@ -23,3 +23,28 @@
       }
     }
 }
+
+/*-----rating-----*/
+.rating {
+  display: flex;
+  .stars {
+    width: 75px;
+    height: 15px;
+    position: relative;
+    background-image: url(../img/icons/star-off.svg);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+  }
+  .stars .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    background-image: url(../img/icons/star-on.svg);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+  }
+  .rating-agregate {
+    display: none;
+  }
+}

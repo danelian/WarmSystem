@@ -38,6 +38,12 @@
 	padding: 30px 20px;
 	border-radius: var(--border-radius);
 	background: radial-gradient(133.33% 133.33% at 50% 50%, #515158 0%, rgba(81, 81, 88, 0.00) 100%), #292932;
+  .link:hover {
+    color: var(--lightGrey-color);
+    &::before {
+      background-color: var(--lightGrey-color);
+    }
+  }
 }
 
 .title {

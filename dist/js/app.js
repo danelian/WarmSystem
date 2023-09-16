@@ -20,6 +20,17 @@ $(document).ready(function () {
 		}
 	});
 
+	// --------------------- History Tabs ---------------------------
+	var historyTab = $('#historyTabs .tabs-items > div');
+	historyTab.hide().filter(':first').show();
+	// Клики по вкладкам.
+	$('#historyTabs .tabs-nav a').click(function () {
+		historyTab.hide();
+		historyTab.filter(this.hash).show();
+		$('#historyTabs .tabs-nav a').removeClass('active');
+		$(this).addClass('active');
+		return false;
+	}).filter(':first').click();
 	
 });
 

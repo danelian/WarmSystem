@@ -28,41 +28,6 @@ section {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
-
-.default-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
-  .heading {
-    width: calc(100% - 200px);
-    margin-bottom: 60px;
-  }
-  .link-lg {
-    margin-bottom: 72px;
-  }
-}
-@include tablet {
-	.default-container {
-		align-items: flex-start;
-		justify-content: flex-start;
-		.heading {
-			width: 100%;
-			margin-bottom: 48px;
-		}
-		.link-lg {
-			margin-top: 24px;
-			margin-bottom: 0;
-			order: 1;
-		}
-	}
-}
-@include mobile {
-	section {
-		padding: 40px 0;
-	}
-}
 .link-center {
 	display: flex;
 	align-items: center;
