@@ -32,6 +32,41 @@ $(document).ready(function () {
 		return false;
 	}).filter(':first').click();
 	
+
+	//--------------- fancybox -----------
+	$('[data-fancybox-popup]').fancybox({
+		closeExisting: true,
+		smallBtn: false,
+		toolbar: false,
+		autoFocus: false,
+		hash: false,
+		touch: false
+	});
+	// FANCYBOX CERTIFICATE
+	// ====================
+	$('[data-fancybox-gallery]').fancybox({
+		transitionEffect: 'fade',
+		animationEffect: false,
+		clickContent: false,
+		touch: true,
+		loop: true,
+		selector: '.cert-item',
+		backFocus: false,
+		lang: 'ru',
+		hideScrollbar: false,
+		// i18n: {
+		// 	ru: {
+		// 		CLOSE: 'Закрыть',
+		// 		ZOOM: 'Увеличить',
+		// 		FULL_SCREEN: 'На весь экран',
+		// 	}
+		// },
+		buttons: [
+			"zoom",
+			"fullScreen",
+			"close"
+		]
+	});
 });
 
 

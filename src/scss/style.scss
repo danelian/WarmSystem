@@ -62,7 +62,7 @@
 
 /***** COMPONENTS GLOBAL *****/
 @import "blocks/header";
-// @import "blocks/footer";
+@import "blocks/footer";
 // @import "blocks/breadcrumbs";
 // @import "blocks/pagination";
 // @import "blocks/tags";
@@ -72,12 +72,11 @@
 // @import "blocks/tooltip";
 // @import "blocks/hover-dpd";
 // @import "blocks/click-dpd";
-// @import "blocks/fancybox";
 // @import "blocks/plyr";
 // @import "blocks/carousel";
 // @import "blocks/article";
 @import "blocks/sliders";
-// @import "blocks/form";
+@import "blocks/form";
 // @import "blocks/modal";
 @import "blocks/components.scss";
 
@@ -90,6 +89,8 @@
 @import "widgets/special.scss";
 @import "widgets/reviews.scss";
 @import "widgets/history.scss";
+@import "widgets/gallery.scss";
+@import "widgets/form-one.scss";
 
 
 @include tablet {

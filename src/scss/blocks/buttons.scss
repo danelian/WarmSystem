@@ -135,6 +135,9 @@
 	line-height: normal;
 	text-transform: uppercase;
 	color: var(--global-color);
+	margin: 0;padding: 0;
+	outline: none;border: 0;
+	background: none;
 	&:before {
 		content: '';
 		position: absolute;
@@ -152,6 +155,26 @@
 			transform: translateY(-1px);
 			background-color: var(--font-color);
 		}
+	}
+}
+.link-input {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+	color: var(--global-color);
+	padding: 4px 0;margin: 0;
+	outline: none;border: 0;
+	border-bottom: 1px solid var(--global-color);
+	background: none;
+	&:hover {
+		color: var(--font-color);
+		border-color: var(--font-color);
 	}
 }
 .link-dark {

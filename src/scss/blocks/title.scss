@@ -44,6 +44,10 @@
       background-color: var(--lightGrey-color);
     }
   }
+  .link-input:hover {
+    color: var(--lightGrey-color);
+    border-color: var(--lightGrey-color);
+  }
 }
 
 .title {
@@ -64,6 +68,14 @@
 	&-3 {
 		font-weight: 700;
 		font-size: 18px;
+		line-height: 1.2;
+		color: var(--font-color);
+	}
+	&-4 {
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-weight: 400;
+		font-size: 17px;
 		line-height: 1.2;
 		color: var(--font-color);
 	}

@@ -1,0 +1,30 @@
+.form-one {
+  .heading {
+    margin-bottom: 60px;
+    .title-1 {
+      margin-bottom: 40px;
+      color: var(--global-color);
+      span {
+        display: block;
+        margin-left: 220px;
+      }
+    }
+    .section-text {
+      margin-left: 220px;
+      max-width: 400px;
+      color: var(--lightGrey-color);
+    }
+  }
+  .form {
+    &-group {
+      width: calc(33.333% - 7px);
+      margin-bottom: 0;
+      &:nth-child(4) {
+        width: 100%;
+      }
+    }
+    .link-input {
+      margin-left: 40px;
+    }
+  }
+}
