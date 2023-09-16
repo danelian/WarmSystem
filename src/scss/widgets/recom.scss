@@ -16,17 +16,9 @@
       border-radius: var(--border-radius);
     }
   }
-  &-tags {
-    position: absolute;
+  .charact-tags {
     top: 5px;right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;margin: 0;
     li {
-      display: inline-flex;
       margin: 5px 0 5px 10px;
       padding: 7px 18px 5px 18px;
       font-size: 20px;
@@ -42,7 +34,7 @@
     }
   }
   &-right {
-    .title-m1 {
+    .title-1 {
       font-size: 30px;
       color: var(--global-color);
       margin-bottom: 50px;

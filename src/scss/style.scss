@@ -57,7 +57,7 @@
 @import "general";
 @import "blocks/buttons";
 @import "blocks/title";
-// @import "blocks/card";
+@import "blocks/card";
 
 
 /***** COMPONENTS GLOBAL *****/
@@ -84,6 +84,8 @@
 /***** SECTIONS GLOBAL (Widgets) *****/
 @import "widgets/hero.scss";
 @import "widgets/recom.scss";
+@import "widgets/benefits.scss";
+@import "widgets/popular.scss";
 
 
 @include tablet {

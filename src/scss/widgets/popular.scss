@@ -1,0 +1,26 @@
+.popular {
+  .heading {
+    .title-1 {
+      margin-left: 80px;
+    }
+    .section-text {
+      max-width: 370px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .link-dark {
+      margin-top: 48px;
+    }
+  }
+  &Swiper {
+    margin-top: -30px;
+    .swiper-nav {
+      margin-top: 0;
+      margin-bottom: 24px;
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        color: #292932;
+      }
+    }
+  }
+}

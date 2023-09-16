@@ -25,17 +25,6 @@ $(document).ready(function () {
 
 
 // ----------------- SWIPER ----------------------
-// var swiper = new Swiper(".recomSwiper", {
-// 	slidesPerView: 1,
-// 	spaceBetween: 10,
-// 	pagination: {
-// 		el: ".swiper-pagination",
-// 	},
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// });
 var swiper = new Swiper('.recomSwiper', {
 	slidesPerView: 1,
 	spaceBetween: 10,
@@ -47,6 +36,26 @@ var swiper = new Swiper('.recomSwiper', {
 		el: '.swiper-pagination',
 		type: 'fraction',
 	},
+});
+var popularSwiper = new Swiper(".popularSwiper", {
+	spaceBetween: 10,
+	slidesPerView: 1,
+	// loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		500: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+	}
 });
 // var swiper = new Swiper(".brandsSwiper", {
 // 	slidesPerView: "auto",
@@ -117,29 +126,6 @@ var swiper = new Swiper('.recomSwiper', {
 // 		},
 // 		1025: {
 // 			spaceBetween: 36
-// 		}
-// 	}
-// });
-// var watchedblSwiper = new Swiper(".watchedblSwiper", {
-// 	spaceBetween: 20,
-// 	slidesPerView: 2,
-// 	loop: true,
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// 	breakpoints: {
-// 		320: {
-// 			slidesPerView: 2,
-// 			spaceBetween: 20
-// 		},
-// 		768: {
-// 			slidesPerView: 3,
-// 			spaceBetween: 24
-// 		},
-// 		1025: {
-// 			spaceBetween: 36,
-// 			slidesPerView: 4,
 // 		}
 // 	}
 // });
