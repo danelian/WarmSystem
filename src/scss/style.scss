@@ -63,12 +63,12 @@
 /***** COMPONENTS GLOBAL *****/
 @import "blocks/header";
 @import "blocks/footer";
-// @import "blocks/breadcrumbs";
+@import "blocks/breadcrumbs";
 @import "blocks/pagination";
 @import "blocks/tags";
 // @import "blocks/scroll-container";
 // @import "blocks/accordion";
-// @import "blocks/tabs";
+@import "blocks/tabs";
 // @import "blocks/tooltip";
 // @import "blocks/hover-dpd";
 // @import "blocks/click-dpd";
@@ -92,6 +92,8 @@
 @import "widgets/gallery.scss";
 @import "widgets/form-one.scss";
 @import "widgets/catalog.scss";
+@import "widgets/product.scss";
+@import "widgets/contentbl.scss";
 
 
 @include tablet {

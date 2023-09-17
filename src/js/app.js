@@ -31,6 +31,30 @@ $(document).ready(function () {
 		$(this).addClass('active');
 		return false;
 	}).filter(':first').click();
+
+	// --------------------- Product Tabs ---------------------------
+	var historyTab = $('#prodTabs .tabs-items > div');
+	historyTab.hide().filter(':first').show();
+	// Клики по вкладкам.
+	$('#prodTabs .tabs-nav a').click(function () {
+		historyTab.hide();
+		historyTab.filter(this.hash).show();
+		$('#prodTabs .tabs-nav a').removeClass('active');
+		$(this).addClass('active');
+		return false;
+	}).filter(':first').click();
+
+	// --------------------- Product About Tabs ---------------------------
+	var historyTab = $('#prodAboutTabs .tabs-items > div');
+	historyTab.hide().filter(':first').show();
+	// Клики по вкладкам.
+	$('#prodAboutTabs .tabs-nav a').click(function () {
+		historyTab.hide();
+		historyTab.filter(this.hash).show();
+		$('#prodAboutTabs .tabs-nav a').removeClass('active');
+		$(this).addClass('active');
+		return false;
+	}).filter(':first').click();
 	
 
 
@@ -82,7 +106,7 @@ $(document).ready(function () {
 
 
 // ----------------- SWIPER ----------------------
-var swiper = new Swiper('.recomSwiper', {
+var recomSwiper = new Swiper('.recomSwiper', {
 	slidesPerView: 1,
 	spaceBetween: 10,
 	navigation: {
@@ -94,7 +118,20 @@ var swiper = new Swiper('.recomSwiper', {
 		type: 'fraction',
 	},
 });
-var popularSwiper = new Swiper(".popularSwiper", {
+var reviewsSwiper = new Swiper('.reviewsSwiper', {
+	slidesPerView: 'auto',
+	// loop: true,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'fraction',
+	},
+});
+var popularSwiper = new Swiper(".popularSwiper, .withitSwiper, .canlikeSwiper, .recentSwiper", {
 	spaceBetween: 10,
 	slidesPerView: 1,
 	// loop: true,
@@ -114,6 +151,24 @@ var popularSwiper = new Swiper(".popularSwiper", {
 		},
 	}
 });
+var productSecond = new Swiper(".productSecond", {
+	spaceBetween: 10,
+	slidesPerView: 'auto',
+	direction: "vertical",
+	freeMode: true,
+	watchSlidesProgress: true,
+});
+var productMain = new Swiper(".productMain", {
+	spaceBetween: 10,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	thumbs: {
+		swiper: productSecond,
+	},
+});
+
 // var swiper = new Swiper(".brandsSwiper", {
 // 	slidesPerView: "auto",
 // 	spaceBetween: 30,

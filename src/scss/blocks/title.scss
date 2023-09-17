@@ -48,6 +48,9 @@
     color: var(--lightGrey-color);
     border-color: var(--lightGrey-color);
   }
+	.title-1, .title-2, .title-3, .title-4 {
+		color: var(--lightGrey-color);
+	}
 }
 
 .title {
@@ -60,12 +63,16 @@
 		color: var(--font-color);
 	}
 	&-2 {
+		margin-top: 0;
+		margin-bottom: 20px;
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 1.2;
 		color: var(--font-color);
 	}
 	&-3 {
+		margin-top: 0;
+		margin-bottom: 20px;
 		font-weight: 700;
 		font-size: 18px;
 		line-height: 1.2;
