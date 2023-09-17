@@ -95,6 +95,7 @@
 @import "widgets/product.scss";
 @import "widgets/contentbl.scss";
 @import "widgets/faq.scss";
+@import "widgets/contacts.scss";
 
 
 @include tablet {
@@ -126,6 +127,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-phone:before {
+  content: "\e90b";
+}
+.icon-place:before {
+  content: "\e90c";
+}
+.icon-postal:before {
+  content: "\e90d";
+}
+.icon-tech:before {
+  content: "\e90e";
+}
 .icon-arrow-next:before {
   content: "\e900";
 }

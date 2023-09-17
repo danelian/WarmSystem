@@ -1508,6 +1508,7 @@ th {
 
 .swiper {
   max-width: 100%;
+  width: 100%;
 }
 
 .swiper-slide img {
@@ -3320,6 +3321,136 @@ input[type=number]::-webkit-inner-spin-button {
   width: 75%;
 }
 
+.contacts .page-heading {
+  margin-bottom: 50px;
+}
+.contacts__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+}
+.contacts__container .map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 200px);
+  height: 480px;
+  z-index: 0;
+}
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px;
+  width: 460px;
+  color: var(--lightGrey-color);
+  border-radius: var(--border-radius);
+  background: radial-gradient(133.33% 133.33% at 50% 50%, #515158 0%, rgba(81, 81, 88, 0) 100%), #292932;
+  z-index: 10;
+}
+.contacts__wrapper .title-2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--lightGrey-color);
+}
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.contacts__list .row .contacts-item:not(:last-child) {
+  margin-bottom: 0;
+  margin-right: 16px;
+}
+.contacts__group:not(:last-child) {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #545462;
+}
+.contacts__group:nth-child(1) {
+  text-transform: uppercase;
+}
+.contacts-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contacts-item i {
+  font-size: 24px;
+  color: var(--global-color);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.contacts-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.contacts-item p {
+  margin: 0;
+}
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contacts a:hover {
+  color: var(--global-color);
+}
+
+.map,
+.ymaps-2-1-79-map,
+.ymaps-2-1-79-inner-panes {
+  border-radius: var(--border-radius);
+}
+
+.team .heading .title-1 {
+  margin-bottom: 0;
+}
+.team .heading .title-1 span {
+  display: block;
+  margin-left: 70px;
+}
+.teamSwiper .swiper-nav {
+  margin-bottom: 24px;
+}
+.teamSwiper .swiper-nav .swiper-button-prev::after, .teamSwiper .swiper-nav .swiper-button-next::after {
+  color: var(--global-color);
+}
+.teamcard {
+  display: flex;
+  flex-direction: column;
+}
+.teamcard-img {
+  width: 100%;
+  aspect-ratio: 33/39;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+.teamcard-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.teamcard-name {
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--font-color);
+  margin-right: 16px;
+}
+.teamcard-post {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #989898;
+}
+
 @media screen and (max-width: 1024px) {
   :root {
     --default-gap: 24px;
@@ -3343,6 +3474,22 @@ input[type=number]::-webkit-inner-spin-button {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e90b";
+}
+
+.icon-place:before {
+  content: "\e90c";
+}
+
+.icon-postal:before {
+  content: "\e90d";
+}
+
+.icon-tech:before {
+  content: "\e90e";
 }
 
 .icon-arrow-next:before {

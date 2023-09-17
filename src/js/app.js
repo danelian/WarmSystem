@@ -176,6 +176,26 @@ var popularSwiper = new Swiper(".popularSwiper, .withitSwiper, .canlikeSwiper, .
 		},
 	}
 });
+var teamSwiper = new Swiper(".teamSwiper", {
+	spaceBetween: 20,
+	slidesPerView: 1,
+	// loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		500: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+	}
+});
 var productSecond = new Swiper(".productSecond", {
 	spaceBetween: 10,
 	slidesPerView: 'auto',
