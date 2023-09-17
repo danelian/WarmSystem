@@ -6,10 +6,20 @@
   padding: 20px;
   border-radius: 15px;
   background: #F5F6F7;
+
   &:not(:last-child) {
     margin-bottom: 10px;
   }
   &s {
+    .page-heading {
+      margin-bottom: 40px;
+      .title-1 {
+        span {
+          display: block;
+          margin-left: 60px;
+        }
+      }
+    }
     .heading {
       display: flex;
       align-items: flex-end;
@@ -105,5 +115,44 @@
         margin-bottom: 1rem;
       }
     }
+  }
+}
+
+.review-form {
+  .default-wrapper {
+    padding-top: 50px;
+  }
+  .heading {
+    margin-bottom: 24px;
+    p {
+      max-width: 440px;
+    }
+  }
+  .form {
+    width: 100%;
+    .row {
+      display: flex;
+      width: 100%;
+      .form-group {
+        width: calc(25% - 8px);
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+    &-group-title {
+      font-size: 17px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+  }
+}
+.rating-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  img {
+    opacity: .3;
+    cursor: pointer;
   }
 }

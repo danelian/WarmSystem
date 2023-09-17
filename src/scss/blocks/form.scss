@@ -47,38 +47,28 @@
 		}
 	}
 
-	// textarea {
-	// 	resize: vertical;
-	// 	width: 100%;
-	// 	min-height: 60px;
-	// 	max-height: 500px;
-	// 	height: 120px;
-	// 	padding: 19px 28px;
-	// 	font-weight: 400;
-	// 	font-size: 17px;
-	// 	line-height: 22px;
-	// 	color: #ECE8E1;
-	// 	box-sizing: border-box;
-	// 	border-radius: 15px;
-	// 	border: 0;
-	// 	outline: none;
-	// 	background: #E5E5E5;
-	// 	transition: .3s ease;
-	// 	// &:focus {
-	// 	// 	&::-webkit-input-placeholder {
-	// 	// 		color: var(--white-color);
-	// 	// 	}
-	// 	// 	&::-moz-placeholder {
-	// 	// 		color: var(--white-color);
-	// 	// 	} /* Firefox 19+ */
-	// 	// 	&:-moz-placeholder {
-	// 	// 		color: var(--white-color);
-	// 	// 	} /* Firefox 18- */
-	// 	// 	&:-ms-input-placeholder {
-	// 	// 		color: var(--white-color);
-	// 	// 	}
-	// 	// }
-	// }
+	textarea {
+		resize: vertical;
+		max-width: 100%;
+		width: 100%;
+		min-height: 50px;
+		max-height: 500px;
+		height: 100px;
+		padding: 15px 20px;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 20px;
+		color: var(--font-color);
+		box-sizing: border-box;
+		border-radius: 10px;
+		border: 0;
+		outline: none;
+		background: #ffffff;
+		transition: .3s ease;
+		&::placeholder {
+			color: #b1b1b1;
+		}
+	}
 	.accept {
 		margin: 10px 0;
 		font-size: 15px;

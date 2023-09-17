@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отзывы</title>
+
+  <!-- favicons -->
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.svg">
+<link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+<link rel="icon" href="img/favicon.svg" type="image/x-icon">
+<meta name="msapplication-tilecolor" content="#fff">
+<meta name="msapplication-tileimage" content="img/favicon.svg">
+<!-- <meta name="theme-color" content="#59A610"> -->
+
+<!-- CSS -->
+<link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
+<!-- SWIPER -->
+<link href="css/swiper-bundle.min.css" rel="stylesheet">
+<!-- SELECT2 -->
+<link rel="stylesheet" href="css/select2.min.css">
+<link href="css/style.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- header -->
+<header class="header">
+	<div class="container header__container">
+		<a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+		<ul class="nav-menu">
+				<li><a href="/">Главная</a></li>
+				<li class="menu-item-has-children">
+					<a href="catalog.html">Каталог</a>
+					<ul class="sub-menu">
+						<li><a href="#">Обогреватели</a></li>
+						<li><a href="#">Очистители</a></li>
+						<li><a href="#">Увлажнители</a></li>
+						<li><a href="#">Осушители</a></li>
+						<li><a href="#">Портативные кондиционеры</a></li>
+					</ul>
+				</li>
+				<li><a href="reviews.html">Отзывы</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+		<div class="lang">
+			<div class="lang-item"><img src="img/flags/estonia.svg" alt=""></div>
+			<div class="lang-item"><img src="img/flags/usa.svg" alt=""></div>
+		</div>
+		<a href="tel:+37256661608" class="header-link">+372 5666 1608</a>
+		<div class="header-bar">
+				<form class="search-label" id="searchBarLabel">
+					<input type="search" class="search-field search-input" placeholder="">
+					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-search"></i></button>
+				</form>
+				<a href="cart.html" class="btn-icon"><i class="icomoon icon-cart"></i></a>
+				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
+		</div>
+	</div>
+</header>
+
+  <main>
+
+    <section class="reviews">
+  <div class="container">
+    <div class="page-heading">
+      <h2 class="title-1">Мы занимаемся своим делом с большой любовью, <span>поэтому клиенты нас рекомендуют</span></h2>
+    </div>
+      <!-- Swiper -->
+      <div class="swiper reviewsSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="review">
+              <div class="review-head">
+                <img src="img/avatar.jpg" class="review-avatar" alt="">
+                <div class="review-info">
+                  <h3>Ирена Демидова</h3>
+                  <p>Таллин. Квартира 62 м2</p>
+                </div>
+                <div class="rating">
+                  <div class="stars">
+                    <div class="progress" style="width: 95%;"></div>
+                  </div>
+                  <div class="rating-agregate">4</div>
+                </div>
+              </div>
+              <div class="review-text">
+                Терморегулятор поддерживает идеальную температуру в комнате в течение всего дня. Кроме того, он очень экономный. Я так
+                рада, что купила этот обогреватель!
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review">
+              <div class="review-head">
+                <img src="img/avatar.jpg" class="review-avatar" alt="">
+                <div class="review-info">
+                  <h3>Ирена Демидова</h3>
+                  <p>Таллин. Квартира 62 м2</p>
+                </div>
+                <div class="rating">
+                  <div class="stars">
+                    <div class="progress" style="width: 95%;"></div>
+                  </div>
+                  <div class="rating-agregate">4</div>
+                </div>
+              </div>
+              <div class="review-text">
+                Терморегулятор поддерживает идеальную температуру в комнате в течение всего дня. Кроме того, он очень экономный. Я так
+                рада, что купила этот обогреватель!
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review">
+              <div class="review-head">
+                <img src="img/avatar.jpg" class="review-avatar" alt="">
+                <div class="review-info">
+                  <h3>Ирена Демидова</h3>
+                  <p>Таллин. Квартира 62 м2</p>
+                </div>
+                <div class="rating">
+                  <div class="stars">
+                    <div class="progress" style="width: 95%;"></div>
+                  </div>
+                  <div class="rating-agregate">4</div>
+                </div>
+              </div>
+              <div class="review-text">
+                Терморегулятор поддерживает идеальную температуру в комнате в течение всего дня. Кроме того, он очень экономный. Я так
+                рада, что купила этот обогреватель!
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review">
+              <div class="review-head">
+                <img src="img/avatar.jpg" class="review-avatar" alt="">
+                <div class="review-info">
+                  <h3>Ирена Демидова</h3>
+                  <p>Таллин. Квартира 62 м2</p>
+                </div>
+                <div class="rating">
+                  <div class="stars">
+                    <div class="progress" style="width: 95%;"></div>
+                  </div>
+                  <div class="rating-agregate">4</div>
+                </div>
+              </div>
+              <div class="review-text">
+                Терморегулятор поддерживает идеальную температуру в комнате в течение всего дня. Кроме того, он очень экономный. Я так
+                рада, что купила этот обогреватель!
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review">
+              <div class="review-head">
+                <img src="img/avatar.jpg" class="review-avatar" alt="">
+                <div class="review-info">
+                  <h3>Ирена Демидова</h3>
+                  <p>Таллин. Квартира 62 м2</p>
+                </div>
+                <div class="rating">
+                  <div class="stars">
+                    <div class="progress" style="width: 95%;"></div>
+                  </div>
+                  <div class="rating-agregate">4</div>
+                </div>
+              </div>
+              <div class="review-text">
+                Терморегулятор поддерживает идеальную температуру в комнате в течение всего дня. Кроме того, он очень экономный. Я так
+                рада, что купила этот обогреватель!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-bottom">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-nav">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+    <section class="review-form">
+  <div class="container">
+    <div class="default-wrapper">
+      <div class="heading">
+        <h2 class="title-1">Пожалуйста, напишите свой отзыв!</h2>
+        <p>Для нас каждый клиент особенный, и мы прислушиваемся к любой обратной связи</p>
+      </div>
+      <form action="" class="form">
+        <div class="row">
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder="Ваше имя">
+          </div>
+          <div class="form-group">
+            <input type="numer" class="form-input" placeholder="+372 565 6767">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder="Город, тип жилья и площадь">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-input" placeholder="Что вы купили">
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Ваш отзыв"></textarea>
+        </div>
+        <div class="form-group">
+          <div class="form-group-title">Выберите оценку</div>
+          <div class="rating-btns">
+            <img src="img/rating-star.svg" alt="">
+            <img src="img/rating-star.svg" alt="">
+            <img src="img/rating-star.svg" alt="">
+            <img src="img/rating-star.svg" alt="">
+            <img src="img/rating-star.svg" alt="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="politika" class="checkbox">
+            <input type="checkbox" id="politika"><span>Соглашаюсь на обработку данных</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Отправить" class="link-input">
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+    <section class="recom">
+  <div class="container">
+    <div class="default-wrapper-dark">
+      <!-- Swiper -->
+      <div class="swiper recomSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="recom-item">
+              <div class="recom-left">
+                <ul class="charact-tags">
+                  <li><span>147.99</span> 133.99 EUR</li>
+                  <li>-10%</li>
+                </ul>
+                <img src="img/recom-img.jpg" alt="">
+              </div>
+              <div class="recom-right">
+                <h2 class="title-1">Акция! Три в 1</h2>
+                <div class="text">
+                  1. Кварцевый обогреватель WS Standard <br>
+                  2. Беспроводной терморегулятор <br>
+                  3. Напольная подставка на колесах 
+                </div>
+                <a href="#" class="link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="recom-item">
+              <div class="recom-left">
+                <ul class="charact-tags">
+                  <li><span>147.99</span> 133.99 EUR</li>
+                  <li>-10%</li>
+                </ul>
+                <img src="img/recom-img.jpg" alt="">
+              </div>
+              <div class="recom-right">
+                <h2 class="title-1">Акция! Три в 1</h2>
+                <div class="text">
+                  1. Кварцевый обогреватель WS Standard
+                  2. Беспроводной терморегулятор
+                  3. Напольная подставка на колесах
+                </div>
+                <a href="#" class="link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="recom-item">
+              <div class="recom-left">
+                <ul class="charact-tags">
+                  <li><span>147.99</span> 133.99 EUR</li>
+                  <li>-10%</li>
+                </ul>
+                <img src="img/recom-img.jpg" alt="">
+              </div>
+              <div class="recom-right">
+                <h2 class="title-1">Акция! Три в 1</h2>
+                <div class="text">
+                  1. Кварцевый обогреватель WS Standard
+                  2. Беспроводной терморегулятор
+                  3. Напольная подставка на колесах
+                </div>
+                <a href="#" class="link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="recom-item">
+              <div class="recom-left">
+                <ul class="charact-tags">
+                  <li><span>147.99</span> 133.99 EUR</li>
+                  <li>-10%</li>
+                </ul>
+                <img src="img/recom-img.jpg" alt="">
+              </div>
+              <div class="recom-right">
+                <h2 class="title-1">Акция! Три в 1</h2>
+                <div class="text">
+                  1. Кварцевый обогреватель WS Standard
+                  2. Беспроводной терморегулятор
+                  3. Напольная подставка на колесах
+                </div>
+                <a href="#" class="link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-bottom">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-nav">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!--------Footer--------->
+<footer class="footer">
+  <div class="container">
+    <div class="default-wrapper">
+      <div class="footer__container">
+        <div class="col">
+          <div class="title-4">Получай акции и новости первым</div>
+          <form action="#" class="form form-subs">
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="example@gmail.com">
+            </div>
+            <p class="accept">Нажимая на кнопку, вы соглашаетесь с условиями политики конфиденциальности</p>
+            <button class="link" type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="col">
+          <div class="footer-title">Основные</div>
+          <ul class="footer-nav">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">Возврат и гарантия</a></li>
+            <li><a href="#">Как сделать заказ</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="footer-title">Каталог</div>
+          <ul class="footer-nav">
+            <li><a href="#">Все товары</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Обогреватели</a></li>
+            <li><a href="#">Очистители</a></li>
+            <li><a href="#">Увлажнители</a></li>
+            <li><a href="#">Осушители</a></li>
+            <li><a href="#">Портативные кондиционеры</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <a href="tel:+37256661608" class="phone">+372 5666 1608</a>
+          <div class="socials">
+            <a href="#" class="social"><span>Instagram</span><img src="img/logos/instagram.svg" alt=""></a>
+            <a href="#" class="social"><span>Facebook</span><img src="img/logos/facebook.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="col">
+          <div class="group">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Условия покупки</a>
+          </div>
+          <div class="group">
+            <p>Сайт сделан в <a href="https://www.redsquirrel.agency/" target="_blank">RedSquirrel</a></p>
+            <p>Copyright © 2023 WarmSystem OÜ</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="certif-list">
+            <img src="img/sertificat-logo.svg" alt="">
+            <img src="img/sertificat-logo.svg" alt="">
+            <img src="img/sertificat-logo.svg" alt="">
+          </div>
+          <p>Цены на сайте включают НДС</p>
+          <div class="logos-list">
+            <img src="img/logos/swedbank.png" alt="">
+            <img src="img/logos/lhv.png" alt="">
+            <img src="img/logos/seb.jpg" alt="">
+            <img src="img/logos/luminor.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+
+  <!-- Script-->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- Swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/select2.min.js"></script>
+
+<!-- <script src="js/readmore.min.js"></script> -->
+
+<!-- Yandex Map -->
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<b4d2f0f6-8d3a-424f-8458-7a684c31efe5>" type="text/javascript"></script> -->
+<!-- <script src="js/icon_customImage.min.js"></script> -->
+<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

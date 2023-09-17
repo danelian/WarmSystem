@@ -1578,6 +1578,28 @@ th {
 .form-input::placeholder {
   color: #b1b1b1;
 }
+.form textarea {
+  resize: vertical;
+  max-width: 100%;
+  width: 100%;
+  min-height: 50px;
+  max-height: 500px;
+  height: 100px;
+  padding: 15px 20px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--font-color);
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+.form textarea::placeholder {
+  color: #b1b1b1;
+}
 .form .accept {
   margin: 10px 0;
   font-size: 15px;
@@ -2300,6 +2322,13 @@ input[type=number]::-webkit-inner-spin-button {
 .review:not(:last-child) {
   margin-bottom: 10px;
 }
+.reviews .page-heading {
+  margin-bottom: 40px;
+}
+.reviews .page-heading .title-1 span {
+  display: block;
+  margin-left: 60px;
+}
 .reviews .heading {
   display: flex;
   align-items: flex-end;
@@ -2390,6 +2419,44 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .review-text p:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.review-form .default-wrapper {
+  padding-top: 50px;
+}
+.review-form .heading {
+  margin-bottom: 24px;
+}
+.review-form .heading p {
+  max-width: 440px;
+}
+.review-form .form {
+  width: 100%;
+}
+.review-form .form .row {
+  display: flex;
+  width: 100%;
+}
+.review-form .form .row .form-group {
+  width: calc(25% - 8px);
+}
+.review-form .form .row .form-group:not(:last-child) {
+  margin-right: 10px;
+}
+.review-form .form-group-title {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.rating-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rating-btns img {
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .history .heading {
