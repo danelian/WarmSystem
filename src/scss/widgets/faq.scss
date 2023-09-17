@@ -1,0 +1,38 @@
+.faq {
+  .page-heading {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  &-form {
+    .default-wrapper {
+      padding-top: 50px;
+    }
+    .heading {
+      margin-bottom: 24px;
+      .title-1 {
+        span {
+          &:nth-child(1) {
+            display: block;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+    .form {
+      width: 100%;
+      .row {
+        display: flex;
+        width: 100%;
+        .form-group {
+          width: calc(25% - 8px);
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+      textarea {
+        width: 75%;
+      }
+    }
+  }
+}

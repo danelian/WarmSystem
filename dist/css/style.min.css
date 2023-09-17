@@ -1377,6 +1377,80 @@ th {
   background-color: var(--global-color);
 }
 
+.accordion-item {
+  padding: 20px 8px 20px 0;
+  border-bottom: 1px solid #8b8b8b;
+}
+.accordion-item:nth-child(1) {
+  border-top: 1px solid #8b8b8b;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-title,
+.accordion-title h3 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--font-color);
+  transition: 0.3s;
+}
+.accordion-title:hover,
+.accordion-title h3:hover {
+  color: var(--global-color);
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-left: 16px;
+}
+.accordion-button:before, .accordion-button:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--global-color);
+  transition: 0.3s ease;
+}
+.accordion-button:after {
+  transform: rotate(90deg);
+}
+.accordion-button:hover::before, .accordion-button:hover::after {
+  opacity: 0.7;
+}
+
+.accordion-content {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.25s ease;
+}
+.accordion-content p {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.accordion-open .accordion-button:after {
+  opacity: 0;
+}
+
 .tabs-style .tabs-nav {
   overflow: hidden;
   margin: 0 0 16px 0;
@@ -2443,6 +2517,9 @@ input[type=number]::-webkit-inner-spin-button {
 .review-form .form .row .form-group:not(:last-child) {
   margin-right: 10px;
 }
+.review-form .form textarea {
+  width: 75%;
+}
 .review-form .form-group-title {
   font-size: 17px;
   font-weight: 400;
@@ -3210,6 +3287,37 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 17px;
   font-weight: 400;
   line-height: 1.2;
+}
+
+.faq .page-heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.faq-form .default-wrapper {
+  padding-top: 50px;
+}
+.faq-form .heading {
+  margin-bottom: 24px;
+}
+.faq-form .heading .title-1 span:nth-child(1) {
+  display: block;
+  margin-left: 40px;
+}
+.faq-form .form {
+  width: 100%;
+}
+.faq-form .form .row {
+  display: flex;
+  width: 100%;
+}
+.faq-form .form .row .form-group {
+  width: calc(25% - 8px);
+}
+.faq-form .form .row .form-group:not(:last-child) {
+  margin-right: 10px;
+}
+.faq-form .form textarea {
+  width: 75%;
 }
 
 @media screen and (max-width: 1024px) {
