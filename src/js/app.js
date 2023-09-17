@@ -33,6 +33,7 @@ $(document).ready(function () {
 	}).filter(':first').click();
 	
 
+
 	//--------------- fancybox -----------
 	$('[data-fancybox-popup]').fancybox({
 		closeExisting: true,
@@ -66,6 +67,16 @@ $(document).ready(function () {
 			"fullScreen",
 			"close"
 		]
+	});
+
+	// --------------------- Select 2 ---------------------------
+	jQuery('.js-example-basic-single').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+	});
+	jQuery('#orderby').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
 	});
 });
 

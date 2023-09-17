@@ -1,31 +1,32 @@
 .tags {
-  @include list-reset;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  list-style: none;
+  margin: 0;padding: 0;
   li {
-    margin: 0 10px 10px 0;
-  }
-}
-.tag {
-  display: inline-block;
-  font-weight: 400;
-  color: $font-color;
-  line-height: 32px;
-  padding: 0 16px;
-  height: 32px;
-  position: relative;
-  text-decoration: none;
-  border-radius: 50px;
-  background-color: #ededed;
-  transition: color 0.3s ease-in, background-color 0.3s ease-in;
-  &:hover {
-    color: $white-color;
-		background-color: $hoverGlobal-color;
-  }
-  &:active {
-    color: $global-color;
-    background-color: #f8f8f8;
+    margin: 0 5px 10px 5px;
+    a {
+      display: inline-block;
+      padding: 10px 24px;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 20px;
+      color: var(--font-color);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 50px;
+      background-color: #ededed;
+      transition: color 0.3s ease-in, background-color 0.3s ease-in;
+      &:hover {
+        color: var(--global-color);
+      }
+      &.active {
+        font-weight: 500;
+        color: var(--lightGrey-color);
+        background-color: var(--global-color);
+      }
+    }
   }
 }
