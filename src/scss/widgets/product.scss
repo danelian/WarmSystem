@@ -286,38 +286,6 @@
   }
 }
 
-.delivery-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 30px 20px;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: normal;
-  min-height: 100px;
-  border-radius: var(--border-radius);
-  background: var(--lightGrey-color);
-  img {
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
-  p {
-    margin: 8px 0;
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
-  a {
-    text-decoration: underline;
-    &:hover {
-      color: var(--global-color);
-      text-decoration: none;
-    }
-  }
-}
-
 .form-consult {
   .form-group {
     width: calc(50% - 5px);

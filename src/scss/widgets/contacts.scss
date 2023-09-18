@@ -41,11 +41,12 @@
     .row {
       .contacts-item:not(:last-child) {
         margin-bottom: 0;
-        margin-right: 16px;
+        margin-right: 60px;
       }
     }
   }
   &__group {
+    width: 100%;
     &:not(:last-child) {
       margin-bottom: 20px;
       padding-bottom: 20px;

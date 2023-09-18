@@ -3122,36 +3122,6 @@ input[type=number]::-webkit-inner-spin-button {
   margin-right: 10px;
 }
 
-.delivery-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 30px 20px;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: normal;
-  min-height: 100px;
-  border-radius: var(--border-radius);
-  background: var(--lightGrey-color);
-}
-.delivery-card img:not(:last-child) {
-  margin-right: 8px;
-}
-.delivery-card p {
-  margin: 8px 0;
-}
-.delivery-card p:not(:last-child) {
-  margin-right: 8px;
-}
-.delivery-card a {
-  text-decoration: underline;
-}
-.delivery-card a:hover {
-  color: var(--global-color);
-  text-decoration: none;
-}
-
 .form-consult .form-group {
   width: calc(50% - 5px);
   margin-bottom: 0;
@@ -3364,7 +3334,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .contacts__list .row .contacts-item:not(:last-child) {
   margin-bottom: 0;
-  margin-right: 16px;
+  margin-right: 60px;
+}
+.contacts__group {
+  width: 100%;
 }
 .contacts__group:not(:last-child) {
   margin-bottom: 20px;
@@ -3449,6 +3422,147 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 400;
   text-transform: uppercase;
   color: #989898;
+}
+
+.paymentbl .default-wrapper,
+.deliverybl .default-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #131313;
+}
+.paymentbl .default-wrapper .heading,
+.deliverybl .default-wrapper .heading {
+  margin-bottom: 20px;
+}
+.paymentbl .default-wrapper .delivery-card,
+.deliverybl .default-wrapper .delivery-card {
+  background: var(--grey-color);
+}
+
+.paymentbl__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.paymentbl__container .col {
+  width: calc(50% - 20px);
+}
+.paymentbl__container .col p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.paymentbl__container .col p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.deliverybl__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
+  width: 100%;
+}
+.deliverybl .delivery-card-head img:not(:last-child) {
+  margin-right: auto;
+}
+.deliverybl .delivery-card-head p:not(:last-child) {
+  margin-right: 30px;
+}
+.deliverybl .delivery-card-content {
+  padding: 30px 20px;
+}
+.deliverybl .delivery-card-content p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #131313;
+}
+.deliverybl .delivery-card-content p:not(:last-child) {
+  margin-bottom: 12px;
+}
+.deliverybl .delivery-card a {
+  text-decoration: underline;
+}
+.deliverybl .delivery-card a:hover {
+  color: var(--global-color);
+  text-decoration: none;
+}
+
+.payment-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+}
+.payment-logos img {
+  width: auto;
+  height: 32px;
+  margin: 0 20px 20px 20px;
+}
+
+.delivery-card {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: var(--border-radius);
+  background: var(--lightGrey-color);
+}
+.delivery-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 30px 20px;
+  min-height: 100px;
+}
+.delivery-card-head:not(:last-child):before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  width: calc(100% - 40px);
+  height: 1px;
+  background: #bfbfbf;
+}
+.delivery-card-head img:not(:last-child) {
+  margin-right: 8px;
+}
+.delivery-card-head p {
+  margin: 8px 0;
+}
+.delivery-card-head p:not(:last-child) {
+  margin-right: 8px;
+}
+.delivery-card-content {
+  padding: 30px 20px;
+}
+.delivery-card-content p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #131313;
+}
+.delivery-card-content p:not(:last-child) {
+  margin-bottom: 12px;
+}
+.delivery-card a {
+  text-decoration: underline;
+}
+.delivery-card a:hover {
+  color: var(--global-color);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1024px) {
