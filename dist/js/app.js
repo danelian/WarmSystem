@@ -20,6 +20,24 @@ $(document).ready(function () {
 		}
 	});
 
+
+	// -------------------- Анимация появления ---------------------------
+	function onEntry(entry) {
+		entry.forEach(change => {
+			if (change.isIntersecting) {
+			change.target.classList.add('element-show');
+			}
+		});
+	}
+	let options = {
+		threshold: [0.5] };
+	let observer = new IntersectionObserver(onEntry, options);
+	let elements = document.querySelectorAll('.element-animation');
+
+	for (let elm of elements) {
+		observer.observe(elm);
+	}
+
 	// --------------------- History Tabs ---------------------------
 	var historyTab = $('#historyTabs .tabs-items > div');
 	historyTab.hide().filter(':first').show();
@@ -33,24 +51,24 @@ $(document).ready(function () {
 	}).filter(':first').click();
 
 	// --------------------- Product Tabs ---------------------------
-	var historyTab = $('#prodTabs .tabs-items > div');
-	historyTab.hide().filter(':first').show();
+	var prodTab = $('#prodTabs .tabs-items > div');
+	prodTab.hide().filter(':first').show();
 	// Клики по вкладкам.
 	$('#prodTabs .tabs-nav a').click(function () {
-		historyTab.hide();
-		historyTab.filter(this.hash).show();
+		prodTab.hide();
+		prodTab.filter(this.hash).show();
 		$('#prodTabs .tabs-nav a').removeClass('active');
 		$(this).addClass('active');
 		return false;
 	}).filter(':first').click();
 
 	// --------------------- Product About Tabs ---------------------------
-	var historyTab = $('#prodAboutTabs .tabs-items > div');
-	historyTab.hide().filter(':first').show();
+	var prodAboutTab = $('#prodAboutTabs .tabs-items > div');
+	prodAboutTab.hide().filter(':first').show();
 	// Клики по вкладкам.
 	$('#prodAboutTabs .tabs-nav a').click(function () {
-		historyTab.hide();
-		historyTab.filter(this.hash).show();
+		prodAboutTab.hide();
+		prodAboutTab.filter(this.hash).show();
 		$('#prodAboutTabs .tabs-nav a').removeClass('active');
 		$(this).addClass('active');
 		return false;

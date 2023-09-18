@@ -140,7 +140,7 @@
       </div>
     </div>
     <div class="product__block">
-      <div class="col">
+      <div class="col" id="styckiBlock">
         <div class="default-wrapper-dark">
           <h2 class="title-2">Получите бесплатную консультацию по этому товару от нашего эксперта!</h2>
           <div class="form form-consult">
@@ -200,9 +200,33 @@
           </div>
           <div class="delivery-card">
             <div class="delivery-card-content">
-              <p>Другой способ доставки</p>
-              <a href="#">Запросить цену</a>
+              <div class="row">
+                <p>Другой способ доставки</p>
+                <a data-fancybox href="#drugoySposobDostavki">Запросить цену</a>
+              </div>
             </div>
+          </div>
+          <div style="display: none; width: 640px;" class="modal" id="drugoySposobDostavki">
+            <div class="modal-heading">
+              <h2 class="modal-title">Узнайте о других способах доставки</h2>
+            </div>
+            <form action="" class="form">
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <input type="numer" class="form-input" placeholder="+372 565 6767">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Как вы хотели бы получить товар?"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="politika" class="checkbox">
+                  <input type="checkbox" id="politika"><span>Я согласен с условиями <a href="#">политики конфиденциальности</a></span>
+                </label>
+              </div>
+              <input type="submit" value="Отправить" class="link-input">
+            </form>
           </div>
         </div>
         <div class="product__details">
@@ -227,22 +251,17 @@
               </div>
               <div class="tabs-item" id="prodTab-2">
                 <div>
-                  <p>Модель: FLYME <br>
-                  Мощность: 1200Вт <br>
-                  Терморегулятор: есть <br>
-                  Таймер: есть <br>
-                  Размеры — 900х450х50 мм <br>
-                  Вес — 19 кг</p>
+                  <p>
+                    1. Керамический обогреватель FLYME 1200P <br>
+                    2. Настенные крепления - 3 шт <br>
+                    3. Инструкция по эксплуатации
+                  </p>
                 </div>
               </div>
               <div class="tabs-item" id="prodTab-3">
                 <div>
-                  <p>Модель: FLYME <br>
-                  Мощность: 1200Вт <br>
-                  Терморегулятор: есть <br>
-                  Таймер: есть <br>
-                  Размеры — 900х450х50 мм <br>
-                  Вес — 19 кг</p>
+                  <a href="img/card-img.jpg" class="download-link" download>Руководство пользователя <i class="icomoon icon-download"></i></a>
+                  <a href="img/card-img.jpg" class="download-link" download>Сертификаты <i class="icomoon icon-download"></i></a>
                 </div>
               </div>
             </div>
@@ -269,3 +288,48 @@
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var a = document.querySelector('#styckiBlock'), b = null, P = 0;  // если ноль заменить на число, то блок будет прилипать до того, как верхний край окна браузера дойдёт до верхнего края элемента. Может быть отрицательным числом
+    window.addEventListener('scroll', Ascroll, false);
+    document.body.addEventListener('scroll', Ascroll, false);
+    function Ascroll() {
+      if (b == null) {
+        var Sa = getComputedStyle(a, ''), s = '';
+        for (var i = 0; i < Sa.length; i++) {
+          if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+            s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
+          }
+        }
+        b = document.createElement('div');
+        b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+        a.insertBefore(b, a.firstChild);
+        var l = a.childNodes.length;
+        for (var i = 1; i < l; i++) {
+          b.appendChild(a.childNodes[1]);
+        }
+        a.style.height = b.getBoundingClientRect().height + 'px';
+        a.style.padding = '0';
+        a.style.border = '0';
+      }
+      var Ra = a.getBoundingClientRect(),
+        R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.product__obzor').getBoundingClientRect().top + 0);  // селектор блока, при достижении верхнего края которого нужно открепить прилипающий элемент;  Math.round() только для IE; если ноль заменить на число, то блок будет прилипать до того, как нижний край элемента дойдёт до футера
+      if ((Ra.top - P) <= 0) {
+        if ((Ra.top - P) <= R) {
+          b.className = 'stop';
+          b.style.top = - R + 'px';
+        } else {
+          b.className = 'sticky';
+          b.style.top = P + 'px';
+        }
+      } else {
+        b.className = '';
+        b.style.top = '';
+      }
+      window.addEventListener('resize', function () {
+        a.children[0].style.width = getComputedStyle(a, '').width
+      }, false);
+    }
+  })()
+</script>

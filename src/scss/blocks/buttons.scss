@@ -242,6 +242,25 @@
 	}
 }
 
+.download-link {
+	display: inline-block;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: normal;
+	text-decoration: none;
+	color: var(--font-color);
+	i {
+		font-size: 24px;
+		line-height: 1;
+		color: var(--global-color);
+	}
+	&:hover {
+		color: var(--global-color);
+	}
+}
+
 // .video {
 // 	display: flex;
 // 	align-items: center;

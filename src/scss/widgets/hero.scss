@@ -54,3 +54,23 @@
     border-radius: var(--border-radius);
   }
 }
+
+
+.element-animation {
+  opacity: 0;
+}
+.hero__heading-str:nth-child(1).element-animation {
+  transform: translateY(20px);
+}
+.hero__heading-str:nth-child(2).element-animation {
+  transform: translateY(50px);
+}
+.text-tag.element-animation.element-show,
+.link.element-animation.element-show {
+  transition: all 5s !important;
+}
+.element-animation.element-show {
+  opacity: 1 !important;
+  transition: all 1.5s !important;
+  transform: translate(0%) !important;
+}

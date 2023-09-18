@@ -176,6 +176,12 @@
         margin-bottom: 12px;
       }
     }
+    .row {
+      row-gap: 8px;
+      p {
+        margin: 0 12px 0 0 !important;
+      }
+    }
   }
   a {
     text-decoration: underline;
