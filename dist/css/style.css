@@ -3252,6 +3252,13 @@ input[type=number]::-webkit-inner-spin-button {
   line-height: 1;
   color: var(--global-color);
 }
+.step h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+}
 .step p {
   margin-top: 0;
   margin-bottom: 0;
@@ -3425,7 +3432,9 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .paymentbl .default-wrapper,
-.deliverybl .default-wrapper {
+.deliverybl .default-wrapper,
+.warrantybl .default-wrapper,
+.orderbl .default-wrapper {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 18px;
@@ -3434,28 +3443,43 @@ input[type=number]::-webkit-inner-spin-button {
   color: #131313;
 }
 .paymentbl .default-wrapper .heading,
-.deliverybl .default-wrapper .heading {
+.deliverybl .default-wrapper .heading,
+.warrantybl .default-wrapper .heading,
+.orderbl .default-wrapper .heading {
   margin-bottom: 20px;
 }
 .paymentbl .default-wrapper .delivery-card,
-.deliverybl .default-wrapper .delivery-card {
+.deliverybl .default-wrapper .delivery-card,
+.warrantybl .default-wrapper .delivery-card,
+.orderbl .default-wrapper .delivery-card {
   background: var(--grey-color);
 }
+.paymentbl .default-wrapper .link,
+.deliverybl .default-wrapper .link,
+.warrantybl .default-wrapper .link,
+.orderbl .default-wrapper .link {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 
-.paymentbl__container {
+.paymentbl__container,
+.warrantybl__container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
-.paymentbl__container .col {
+.paymentbl__container .col,
+.warrantybl__container .col {
   width: calc(50% - 20px);
 }
-.paymentbl__container .col p {
+.paymentbl__container .col p,
+.warrantybl__container .col p {
   margin-top: 0;
   margin-bottom: 0;
 }
-.paymentbl__container .col p:not(:last-child) {
+.paymentbl__container .col p:not(:last-child),
+.warrantybl__container .col p:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -3491,6 +3515,37 @@ input[type=number]::-webkit-inner-spin-button {
 .deliverybl .delivery-card a:hover {
   color: var(--global-color);
   text-decoration: none;
+}
+
+.orderbl .heading {
+  width: calc(50% - 20px);
+}
+.orderbl__cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 46px;
+  width: 100%;
+}
+.orderbl__cards .step {
+  width: calc(50% - 20px);
+}
+.orderbl__cards .step:nth-child(odd) {
+  margin-right: 40px;
+}
+.orderbl__cards .step:nth-child(1), .orderbl__cards .step:nth-child(2) {
+  margin-right: 50px;
+}
+.orderbl__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(50% - 20px);
+  aspect-ratio: 56/40;
+  object-fit: cover;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 .payment-logos {
@@ -3563,6 +3618,56 @@ input[type=number]::-webkit-inner-spin-button {
 .delivery-card a:hover {
   color: var(--global-color);
   text-decoration: none;
+}
+
+.errorpage__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 860px;
+  min-height: 360px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.errorpage__container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 260px;
+  height: 165px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  background-image: url("../img/errorpage-img-01.jpg");
+  z-index: -1;
+}
+.errorpage__container::after {
+  content: "";
+  position: absolute;
+  right: 110px;
+  bottom: 0;
+  width: 140px;
+  height: 165px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  background-image: url("../img/errorpage-img-02.jpg");
+  z-index: -1;
+}
+.errorpage__container span {
+  display: block;
+  margin-bottom: 35px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--global-color);
+}
+.errorpage__container .title-1 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 @media screen and (max-width: 1024px) {

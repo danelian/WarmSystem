@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Как сделать заказ</title>
+
+  @@include('template/meta.html')
+</head>
+
+<body>
+
+  @@include('template/header.html')
+
+  <main>
+
+    <section class="errorpage">
+      <div class="container">
+        <div class="errorpage__container">
+          <span>404</span>
+          <h1 class="title-1">Такой страницы не существует</h1>
+          <a href="index.html" class="link">Вернуться на главную</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('template/footer.html')
+
+  <!-- @@include('template/modals.html') -->
+
+  @@include('template/scripts.html')
+
+</body>
+
+</html>
