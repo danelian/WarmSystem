@@ -3878,6 +3878,166 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 32px;
 }
 
+.cartbar-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 380px;
+  max-width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  color: var(--font-color);
+  background: var(--white-color);
+  z-index: 999999;
+  transition: 0.5s ease;
+}
+.cartbar-group, .cartbar-head {
+  width: 100%;
+  padding: 20px 16px;
+}
+.cartbar-group:not(:last-child), .cartbar-head:not(:last-child) {
+  border-bottom: 1px solid #d0d0d0;
+}
+.cartbar-group .row, .cartbar-head .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.cartbar-group .row:not(:last-child), .cartbar-head .row:not(:last-child) {
+  margin-bottom: 10px;
+}
+.cartbar-group .row .col, .cartbar-head .row .col {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--font-color);
+}
+.cartbar-group .row .col:nth-child(2), .cartbar-head .row .col:nth-child(2) {
+  text-align: right;
+  margin-left: 12px;
+}
+.cartbar-card {
+  position: relative;
+  width: 100%;
+  padding: 20px 16px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.cartbar-card-remove {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.cartbar-card-remove:hover {
+  color: var(--global-color);
+}
+.cartbar-card-img {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: var(--border-radius);
+  background: var(--lightGrey-color);
+}
+.cartbar-card-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: var(--border-radius);
+}
+.cartbar-card-info {
+  padding-top: 4px;
+  padding-left: 115px;
+  width: 100%;
+  min-height: 100px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+.cartbar-card-name {
+  width: calc(100% - 20px);
+  margin-bottom: 20px;
+}
+.cartbar-card-text p {
+  margin: 0;
+}
+.cartbar-card-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.cartbar-card-total .col:first-child {
+  margin-right: 12px;
+}
+.cartbar-card-total .col:last-child {
+  margin-left: 12px;
+}
+.cartbar-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px 16px 20px 16px;
+}
+.cartbar-btns .link-withicon:not(:last-child) {
+  margin-bottom: 24px;
+}
+.cartbar-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--font-color);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.cartbar-close:before {
+  font-family: "icomoon" !important;
+  content: "\e907";
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cartbar-close:hover {
+  color: var(--global-color);
+}
+.cartbar-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 999998;
+}
+
 @media screen and (max-width: 1024px) {
   :root {
     --default-gap: 24px;
