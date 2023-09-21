@@ -111,6 +111,25 @@
   }
 }
 
+/* изменение вида блока на странице корзины */
+.woocommerce-cart {
+  .canlike .heading {
+    .title-1 {
+      span {
+        margin-left: 0;
+        display: inline;
+      }
+    }
+    .section-text {
+      max-width: 360px;
+      margin: 1rem auto;
+    }
+    .link {
+      margin-top: 20px;
+    }
+  }
+}
+
 
 .sticky {
   position: fixed;

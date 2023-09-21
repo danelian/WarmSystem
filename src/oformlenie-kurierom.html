@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа - Доставка курьером</title>
+
+  @@include('template/meta.html')
+</head>
+
+<body class="woocommerce-cart">
+
+  @@include('template/header.html')
+
+  <main>
+
+    <section class="cart">
+      <div class="container">
+        <div class="default-wrapper">
+          <div class="heading-row">
+            <div class="col">
+              <h1 class="title-1" style="text-transform: uppercase;">ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+            </div>
+            <div class="col">
+              <a href="cart.html" class="link">На прошлый шаг</a>
+            </div>
+          </div>
+          <div class="cart-container">
+            <div class="col">
+              <a href="#" class="link">Войти в учетную запись</a>
+              <form class="checkout woocommerce-checkout">
+                <div class="form-item">
+                  <p class="form-title">Данные покупателя</p>
+                  <div class="row-2">
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Имя">
+                    </p>
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Фамилия">
+                    </p>
+                    <p class="form-group">
+                      <input type="tel" class="form-input" placeholder="Телефон">
+                    </p>
+                    <p class="form-group">
+                      <input type="email" class="form-input" placeholder="Email">
+                    </p>
+                  </div>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Покупаю для компании</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="form-item">
+                  <p class="form-title">Платежный адрес</p>
+                  <div class="row-2">
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Город">
+                    </p>
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Улица, дом и квартира">
+                    </p>
+                    <p class="form-group">
+                      <select id="select_region">
+                        <option></option>
+                        <option value="region1">Регион 1</option>
+                        <option value="region2">Регион 2</option>
+                        <option value="region3">Регион 3</option>
+                      </select>
+                    </p>
+                    <p class="form-group">
+                      <select id="select_country">
+                        <option></option>
+                        <option value="region1">Регион 1</option>
+                        <option value="region2">Регион 2</option>
+                        <option value="region3">Регион 3</option>
+                      </select>
+                    </p>
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Почтовый индекс">
+                    </p>
+                  </div>
+                </div>
+                <div class="form-item">
+                  <p class="form-title">Способ доставки</p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Заберу сам из магазина (Punane 50, Tallinn, 13619, Estonia)</span>
+                    </label>
+                    <strong class="checkbox-info">€0,00</strong>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox" checked>
+                      <span>Доставка курьером DPD (2-4 дня) по Прибалтике</span>
+                    </label>
+                    <strong class="checkbox-info">€10,00</strong>
+                  </p>
+                  <div class="form-item">
+                    <p class="form-title">Адрес доставки</p>
+                    <p class="form-group checkbox">
+                        <label>
+                          <input type="checkbox" class="input-checkbox">
+                          <span>Совпадает с платежным адресом</span>
+                        </label>
+                    </p>
+                    <div class="row-2">
+                        <p class="form-group">
+                        <input type="text" class="form-input" placeholder="Город">
+                        </p>
+                        <p class="form-group">
+                        <input type="text" class="form-input" placeholder="Улица, дом и квартира">
+                        </p>
+                        <p class="form-group">
+                        <select id="select_region_second">
+                            <option></option>
+                            <option value="region1">Регион 1</option>
+                            <option value="region2">Регион 2</option>
+                            <option value="region3">Регион 3</option>
+                        </select>
+                        </p>
+                        <p class="form-group">
+                        <select id="select_country_second">
+                            <option></option>
+                            <option value="region1">Регион 1</option>
+                            <option value="region2">Регион 2</option>
+                            <option value="region3">Регион 3</option>
+                        </select>
+                        </p>
+                        <p class="form-group">
+                        <input type="text" class="form-input" placeholder="Почтовый индекс">
+                        </p>
+                        <p class="form-tooltext">
+                            NB! Сроки доставки предварительные, так как зависят от нескольких факторов. 
+                            Окончательный срок доставки указывается транспортной компанией после подтверждения заказа
+                        </p>
+                    </div>
+                  </div>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Доставка курьером Omniva (1-2 дня) по Прибалтике</span>
+                    </label>
+                    <strong class="checkbox-info">€8,00</strong>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Доставка другой транспортной компанией</span>
+                    </label>
+                    <strong class="checkbox-info">По запросу</strong>
+                  </p>
+                </div>
+                <div class="form-item">
+                  <p class="form-title">Способ оплаты</p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox" checked>
+                      <span>Интернет-банк</span>
+                    </label>
+                  </p>
+                  <div class="s-checkbox-list">
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox" checked>
+                        <span>Swedbank</span>
+                      </label>
+                    </p>
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox">
+                        <span>LHV</span>
+                      </label>
+                    </p>
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox">
+                        <span>SEB</span>
+                      </label>
+                    </p>
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox">
+                        <span>Luminoor</span>
+                      </label>
+                    </p>
+                  </div>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Оплата наличными при самовывозе</span>
+                    </label>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Cash on delivery через Omniva <strong class="tooltip">Текст подсказки</strong></span>
+                    </label>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Хочу оплатить другим способом</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="form-item">
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox" checked>
+                      <span>Я хочу создать учетную запись</span>
+                    </label>
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div class="col">
+              <div class="cartbar">
+                <div class="cartbar-head">
+                  <div class="row">
+                    <div class="col">Корзина (4 товара)</div>
+                    <div class="col">€474,96</div>
+                  </div>
+                </div>
+                <div class="cartbar-body">
+                  <div class="cartbar-card">
+                    <a href="product.html" class="cartbar-card-img">
+                      <img src="img/cartbar-card-img.png" alt="">
+                    </a>
+                    <div class="cartbar-card-info">
+                      <a href="#" class="cartbar-card-name">Керамический обогреватель FLYME 1200P</a>
+                      <div class="cartbar-card-text">
+                        <p>Цвет: Кварц</p>
+                      </div>
+                    </div>
+                    <div class="cartbar-card-total">
+                      <div class="col">1x €255,99</div>
+                      <div class="col">€255,99</div>
+                    </div>
+                  </div>
+                  <div class="cartbar-card">
+                    <a href="product.html" class="cartbar-card-img">
+                      <img src="img/cartbar-card-img.png" alt="">
+                    </a>
+                    <div class="cartbar-card-info">
+                      <div class="cartbar-card-name">Керамический обогреватель FLYME 1200P</div>
+                      <div class="cartbar-card-text">
+                        <p>Цвет: Кварц</p>
+                      </div>
+                    </div>
+                    <div class="cartbar-card-total">
+                      <div class="col">1x €255,99</div>
+                      <div class="col">€255,99</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartbar-footer">
+                  <div class="cartbar-total">
+                    <div class="cartbar-group">
+                      <div class="row">
+                        <div class="col">Сумма:</div>
+                        <div class="col">€539,36</div>
+                      </div>
+                      <div class="row">
+                        <div class="col">Скидка:</div>
+                        <div class="col">€64,40</div>
+                      </div>
+                    </div>
+                    <div class="cartbar-group">
+                      <div class="row">
+                        <div class="col">Итого:</div>
+                        <div class="col">€474,96</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-bottom">
+            <div class="cart-bottom-container">
+              <a href="cart.html" class="back-link"><i class="icomoon icon-chevron"></i>Назад</a>
+              <button class="link-withicon"><i class="icomoon icon-wallet"></i><span>Перейти к оплате</span></button>
+            </div>
+            <div class="cart-bottom-text">На следующем шаге вы сможете совершить оплату</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('template/footer.html')
+
+  @@include('template/scripts.html')
+
+</body>
+
+</html>

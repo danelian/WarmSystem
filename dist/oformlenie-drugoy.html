@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа - Доставка другой транспортной компанией</title>
+
+  <!-- favicons -->
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.svg">
+<link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+<link rel="icon" href="img/favicon.svg" type="image/x-icon">
+<meta name="msapplication-tilecolor" content="#fff">
+<meta name="msapplication-tileimage" content="img/favicon.svg">
+<!-- <meta name="theme-color" content="#59A610"> -->
+
+<!-- CSS -->
+<link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
+<!-- SWIPER -->
+<link href="css/swiper-bundle.min.css" rel="stylesheet">
+<!-- SELECT2 -->
+<link rel="stylesheet" href="css/select2.min.css">
+<link href="css/style.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body class="woocommerce-cart">
+
+  <!-- header -->
+<header class="header">
+	<div class="container header__container">
+		<a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+		<ul class="nav-menu">
+				<li><a href="/">Главная</a></li>
+				<li class="menu-item-has-children">
+					<a href="catalog.html">Каталог</a>
+					<ul class="sub-menu">
+						<li><a href="#">Обогреватели</a></li>
+						<li><a href="#">Очистители</a></li>
+						<li><a href="#">Увлажнители</a></li>
+						<li><a href="#">Осушители</a></li>
+						<li><a href="#">Портативные кондиционеры</a></li>
+					</ul>
+				</li>
+				<li><a href="reviews.html">Отзывы</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+		<div class="lang">
+			<div class="lang-item"><img src="img/flags/estonia.svg" alt=""></div>
+			<div class="lang-item"><img src="img/flags/usa.svg" alt=""></div>
+		</div>
+		<a href="tel:+37256661608" class="header-link">+372 5666 1608</a>
+		<div class="header-bar">
+				<form class="search-label" id="searchBarLabel">
+					<input type="search" class="search-field search-input" placeholder="">
+					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-search"></i></button>
+				</form>
+				<a href="cart.html" class="btn-icon"><i class="icomoon icon-cart"></i></a>
+				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
+		</div>
+	</div>
+</header>
+
+  <main>
+
+    <section class="cart">
+      <div class="container">
+        <div class="default-wrapper">
+          <div class="heading-row">
+            <div class="col">
+              <h1 class="title-1" style="text-transform: uppercase;">ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+            </div>
+            <div class="col">
+              <a href="cart.html" class="link">На прошлый шаг</a>
+            </div>
+          </div>
+          <div class="cart-container">
+            <div class="col">
+              <a href="#" class="link">Войти в учетную запись</a>
+              <form class="checkout woocommerce-checkout">
+                <div class="form-item">
+                  <p class="form-title">Данные покупателя</p>
+                  <div class="row-2">
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Имя">
+                    </p>
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Фамилия">
+                    </p>
+                    <p class="form-group">
+                      <input type="tel" class="form-input" placeholder="Телефон">
+                    </p>
+                    <p class="form-group">
+                      <input type="email" class="form-input" placeholder="Email">
+                    </p>
+                  </div>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Покупаю для компании</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="form-item">
+                  <p class="form-title">Платежный адрес</p>
+                  <div class="row-2">
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Город">
+                    </p>
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Улица, дом и квартира">
+                    </p>
+                    <p class="form-group">
+                      <select id="select_region">
+                        <option></option>
+                        <option value="region1">Регион 1</option>
+                        <option value="region2">Регион 2</option>
+                        <option value="region3">Регион 3</option>
+                      </select>
+                    </p>
+                    <p class="form-group">
+                      <select id="select_country">
+                        <option></option>
+                        <option value="region1">Регион 1</option>
+                        <option value="region2">Регион 2</option>
+                        <option value="region3">Регион 3</option>
+                      </select>
+                    </p>
+                    <p class="form-group">
+                      <input type="text" class="form-input" placeholder="Почтовый индекс">
+                    </p>
+                  </div>
+                </div>
+                <div class="form-item">
+                  <p class="form-title">Способ доставки</p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Заберу сам из магазина (Punane 50, Tallinn, 13619, Estonia)</span>
+                    </label>
+                    <strong class="checkbox-info">€0,00</strong>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Доставка курьером DPD (2-4 дня) по Прибалтике</span>
+                    </label>
+                    <strong class="checkbox-info">€10,00</strong>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Доставка курьером Omniva (1-2 дня) по Прибалтике</span>
+                    </label>
+                    <strong class="checkbox-info">€8,00</strong>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox" checked>
+                      <span>Доставка другой транспортной компанией</span>
+                    </label>
+                    <strong class="checkbox-info">По запросу</strong>
+                  </p>
+                  <p class="form-tooltext">Мы свяжемся с вами для уточнения дополнительной информации</p>
+                </div>
+                <div class="form-item">
+                  <p class="form-title">Способ оплаты</p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox" checked>
+                      <span>Интернет-банк</span>
+                    </label>
+                  </p>
+                  <div class="s-checkbox-list">
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox" checked>
+                        <span>Swedbank</span>
+                      </label>
+                    </p>
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox">
+                        <span>LHV</span>
+                      </label>
+                    </p>
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox">
+                        <span>SEB</span>
+                      </label>
+                    </p>
+                    <p class="s-checkbox">
+                      <label>
+                        <input type="checkbox" class="s-input-checkbox">
+                        <span>Luminoor</span>
+                      </label>
+                    </p>
+                  </div>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Оплата наличными при самовывозе</span>
+                    </label>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Cash on delivery через Omniva <strong class="tooltip">Текст подсказки</strong></span>
+                    </label>
+                  </p>
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox">
+                      <span>Хочу оплатить другим способом</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="form-item">
+                  <p class="form-group checkbox">
+                    <label>
+                      <input type="checkbox" class="input-checkbox" checked>
+                      <span>Я хочу создать учетную запись</span>
+                    </label>
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div class="col">
+              <div class="cartbar">
+                <div class="cartbar-head">
+                  <div class="row">
+                    <div class="col">Корзина (4 товара)</div>
+                    <div class="col">€474,96</div>
+                  </div>
+                </div>
+                <div class="cartbar-body">
+                  <div class="cartbar-card">
+                    <a href="product.html" class="cartbar-card-img">
+                      <img src="img/cartbar-card-img.png" alt="">
+                    </a>
+                    <div class="cartbar-card-info">
+                      <a href="#" class="cartbar-card-name">Керамический обогреватель FLYME 1200P</a>
+                      <div class="cartbar-card-text">
+                        <p>Цвет: Кварц</p>
+                      </div>
+                    </div>
+                    <div class="cartbar-card-total">
+                      <div class="col">1x €255,99</div>
+                      <div class="col">€255,99</div>
+                    </div>
+                  </div>
+                  <div class="cartbar-card">
+                    <a href="product.html" class="cartbar-card-img">
+                      <img src="img/cartbar-card-img.png" alt="">
+                    </a>
+                    <div class="cartbar-card-info">
+                      <div class="cartbar-card-name">Керамический обогреватель FLYME 1200P</div>
+                      <div class="cartbar-card-text">
+                        <p>Цвет: Кварц</p>
+                      </div>
+                    </div>
+                    <div class="cartbar-card-total">
+                      <div class="col">1x €255,99</div>
+                      <div class="col">€255,99</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartbar-footer">
+                  <div class="cartbar-total">
+                    <div class="cartbar-group">
+                      <div class="row">
+                        <div class="col">Сумма:</div>
+                        <div class="col">€539,36</div>
+                      </div>
+                      <div class="row">
+                        <div class="col">Скидка:</div>
+                        <div class="col">€64,40</div>
+                      </div>
+                    </div>
+                    <div class="cartbar-group">
+                      <div class="row">
+                        <div class="col">Итого:</div>
+                        <div class="col">€474,96</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-bottom">
+            <div class="cart-bottom-container">
+              <a href="cart.html" class="back-link"><i class="icomoon icon-chevron"></i>Назад</a>
+              <button class="link-withicon"><i class="icomoon icon-wallet"></i><span>Перейти к оплате</span></button>
+            </div>
+            <div class="cart-bottom-text">На следующем шаге вы сможете совершить оплату</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--------Footer--------->
+<footer class="footer">
+  <div class="container">
+    <div class="default-wrapper">
+      <div class="footer__container">
+        <div class="col">
+          <div class="title-4">Получай акции и новости первым</div>
+          <form action="#" class="form form-subs">
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="example@gmail.com">
+            </div>
+            <p class="accept">Нажимая на кнопку, вы соглашаетесь с условиями политики конфиденциальности</p>
+            <button class="link" type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="col">
+          <div class="footer-title">Основные</div>
+          <ul class="footer-nav">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">Возврат и гарантия</a></li>
+            <li><a href="#">Как сделать заказ</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="footer-title">Каталог</div>
+          <ul class="footer-nav">
+            <li><a href="#">Все товары</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Обогреватели</a></li>
+            <li><a href="#">Очистители</a></li>
+            <li><a href="#">Увлажнители</a></li>
+            <li><a href="#">Осушители</a></li>
+            <li><a href="#">Портативные кондиционеры</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <a href="tel:+37256661608" class="phone">+372 5666 1608</a>
+          <div class="socials">
+            <a href="#" class="social"><span>Instagram</span><img src="img/logos/instagram.svg" alt=""></a>
+            <a href="#" class="social"><span>Facebook</span><img src="img/logos/facebook.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="col">
+          <div class="group">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Условия покупки</a>
+          </div>
+          <div class="group">
+            <p>Сайт сделан в <a href="https://www.redsquirrel.agency/" target="_blank">RedSquirrel</a></p>
+            <p>Copyright © 2023 WarmSystem OÜ</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="certif-list">
+            <img src="img/sertificat-logo.svg" alt="">
+            <img src="img/sertificat-logo.svg" alt="">
+            <img src="img/sertificat-logo.svg" alt="">
+          </div>
+          <p>Цены на сайте включают НДС</p>
+          <div class="logos-list">
+            <img src="img/logos/swedbank.png" alt="">
+            <img src="img/logos/lhv.png" alt="">
+            <img src="img/logos/seb.jpg" alt="">
+            <img src="img/logos/luminor.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Script-->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- Swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/select2.min.js"></script>
+
+<!-- <script src="js/readmore.min.js"></script> -->
+
+<!-- Yandex Map -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<5a55f487-a252-4929-8714-ec32f386f97c>" type="text/javascript"></script>
+<script src="js/icon_customImage.min.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

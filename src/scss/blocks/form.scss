@@ -8,6 +8,7 @@
 		margin-bottom: 24px;
 	}
   &-title {
+	margin-top: 0;
     margin-bottom: 20px;
     display: block;
     font-size: 20px;
@@ -15,9 +16,16 @@
     line-height: 1.25;
     color: var(--font-color);
   }
+  &-tooltext {
+	margin-top: 4px;
+	margin-bottom: 8px;
+	font-size: 15px;
+	line-height: 1.2;
+  }
 	&-group {
 		position: relative;
 		width: 100%;
+		margin-top: 0;
 		margin-bottom: 20px;
 		.select2 {
 			width: 100% !important;
@@ -99,6 +107,18 @@
 	// 		}
 	// 	}
 	// }
+	&-item {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+		.form-item {
+			margin-top: 24px;
+			margin-bottom: 24px;
+			.form-title {
+				font-size: 17px;
+			}
+		}
+	}
 }
 
 .form-subs {
@@ -146,7 +166,7 @@
 		padding: 0 0 0 30px;
 		font-weight: 400;
 		font-size: 15px;
-		line-height: 16px;
+		line-height: 18px;
 		color: var(--font-color);
 	}
 	span:before {
@@ -157,12 +177,10 @@
 		top: 0;
 		width: 15px;
 		height: 15px;
-		border: 1px solid var(--font-color);
 		border-radius: 2px;
-		background-color: transparent;
+		background-color: var(--grey-color);
 	}
 	input[type=checkbox]:checked+span:before {
-		border-color: transparent;
 		background-color: var(--grey-color);
 	}
 	/* Checked */
@@ -178,24 +196,54 @@
 		color: var(--gold-color);
 	}
 }
-.checkbox-item {
-	&-container {
+.s-checkbox {
+	display: block;
+	margin: 0 18px 14px 0;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	&-list {
 		display: flex;
 		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: flex-start;
+		flex-wrap: wrap;
 		width: 100%;
+		margin-bottom: 8px;
 	}
-	&-info {
-		margin-left: 14px;
+	input[type=checkbox] {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		display: block;
+		width: 0;
+		height: 0;
+	}
+	span {
+		display: inline-block;
+		position: relative;
+		padding: 15px 28px;
+		font-weight: 400;
 		font-size: 17px;
-		text-align: right;
+		line-height: 20px;
+		color: var(--font-color);
+		border: 1px solid transparent;
+		border-radius: var(--border-radius);
+		background: var(--white-color);
 	}
-	.checkbox {
-		margin-bottom: 20px;
-	}
-	.row-2 {
-		margin-top: 14px;
-		margin-bottom: 16px;
+	// span:before {
+	// 	content: "";
+	// 	display: inline-block;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	width: 15px;
+	// 	height: 15px;
+	// 	border-radius: 2px;
+	// 	background-color: var(--grey-color);
+	// }
+	/* Checked */
+	input[type=checkbox]:checked+span {
+		border-color: var(--font-color);
 	}
 }
 
@@ -305,36 +353,36 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .select2-selection__rendered,
 .select2-container .select2-selection--single {
-	padding-right: 30px;
+	padding-right: 40px;
 	height: 50px;
 	border: 0 !important; 
 	font-weight: 400;
 	font-size: 17px;
 	line-height: 22px;
-	border-radius: 15px;
+	border-radius: 10px;
 	color: var(--font-color) !important;
 	background: #E5E5E5;
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
-	padding: 16px 28px;
-	border-radius: 15px;
+	padding: 13px 20px;
+	border-radius: 10px;
 	font-size: 17px;
 	color: var(--font-color) !important;
 	background: #E5E5E5;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-	width: 16px;
-  height: 16px;
+	width: 18px;
+  height: 18px;
   top: 50%;
-  right: 24px;
+  right: 12px;
   transform: translateY(-50%);
 	&::before {
-		content: '\e906';
+		content: '\e905';
 		position: absolute;
 		font-family: 'icomoon';
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 1;
-		color: var(--font-color);
+		color: #B1B1B1;
 		transition: .3s;
 	}
 }
@@ -401,6 +449,35 @@ input[type="number"]::-webkit-inner-spin-button {
 		&::before {
 			content: '\e905';
 			color: #989898;
+		}
+	}
+}
+
+
+
+
+/* Стили по вордпресс и вукомерс */
+.woocommerce-checkout {
+	.row-2 {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		.form-group {
+			width: calc(50% - 10px);
+			&:nth-child(odd) {
+				margin-right: 20px;
+			}
+		}
+	}
+	.checkbox {
+		display: inline-flex;
+		margin-bottom: 18px;
+		width: 100%;
+		&-info {
+			margin-left: auto;
+			font-weight: 400;
+			text-align: right;
 		}
 	}
 }

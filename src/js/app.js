@@ -145,6 +145,30 @@ $(document).ready(function () {
 		minimumResultsForSearch: Infinity,
 		dropdownPosition: 'below',
 	});
+	jQuery('#select_region').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: "Регион/Уезд",
+		allowClear: true
+	});
+	jQuery('#select_country').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: "Страна",
+		allowClear: true
+	});
+	jQuery('#select_region_second').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: "Регион/Уезд",
+		allowClear: true
+	});
+	jQuery('#select_country_second').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: "Страна",
+		allowClear: true
+	});
 });
 
 

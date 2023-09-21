@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа - на компанию + другой способ оплаты</title>
+
+  @@include('template/meta.html')
+</head>
+
+<body>
+
+  @@include('template/header.html')
+
+  <main>
+
+    <section class="cart">
+      <div class="container">
+        <div class="default-wrapper">
+          <div class="heading-row">
+            <div class="col">
+              <h1 class="title-1" style="text-transform: uppercase;">Заказ оформлен!</h1>
+            </div>
+          </div>
+          <div class="cart-container">
+            <div class="col">
+              <div class="cart-block">
+                <h2 class="title-2">Спасибо! Мы получили ваш заказ и уже начинаем его готовить</h2>
+                <p class="section-text">Мы отправили вам подробную информацию по электронной почте. Если письма нет, проверьте папку Спам</p>
+                <a href="catalog.html" class="link">В каталог</a>
+              </div>
+              <div class="cart-block">
+                <h3 class="title-2">Контакты</h3>
+                <div class="contacts__list">
+                  <div class="contacts__group">
+                    <div class="contacts-item"><i class="icomoon icon-phone"></i><a href="tel:+37256661608">+372 5666 1608</a></div>
+                    <div class="contacts-item"><i class="icomoon icon-postal"></i><a href="mailto:info@warmsystem.eu">info@warmsystem.eu</a></div>
+                    <div class="contacts-item"><i class="icomoon icon-place"></i><p>Punane 50, Tallinn, 13619, Estonia</p></div>
+                  </div>
+                  <div class="contacts__group">
+                    <div class="contacts-item"><i class="icomoon icon-tech"></i><p>Техподдержка: <a href="tel:+37256902030">+372 5690 2030</a></p></div>
+                  </div>
+                  <div class="contacts__group">
+                    <div class="row">
+                      <a href="#" class="contacts-item"><img src="img/icons/whatsapp.svg" alt=""> WhatsApp</a>
+                      <a href="#" class="contacts-item"><img src="img/icons/viber.svg" alt=""> Viber</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cartbar">
+                <div class="cartbar-head">
+                  <div class="row">
+                    <div class="col">Корзина (4 товара)</div>
+                    <div class="col">€474,96</div>
+                  </div>
+                </div>
+                <div class="cartbar-body">
+                  <div class="cartbar-card">
+                    <a href="product.html" class="cartbar-card-img">
+                      <img src="img/cartbar-card-img.png" alt="">
+                    </a>
+                    <div class="cartbar-card-info">
+                      <a href="#" class="cartbar-card-name">Керамический обогреватель FLYME 1200P</a>
+                      <div class="cartbar-card-text">
+                        <p>Цвет: Кварц</p>
+                      </div>
+                    </div>
+                    <div class="cartbar-card-total">
+                      <div class="col">1x €255,99</div>
+                      <div class="col">€255,99</div>
+                    </div>
+                  </div>
+                  <div class="cartbar-card">
+                    <a href="product.html" class="cartbar-card-img">
+                      <img src="img/cartbar-card-img.png" alt="">
+                    </a>
+                    <div class="cartbar-card-info">
+                      <div class="cartbar-card-name">Керамический обогреватель FLYME 1200P</div>
+                      <div class="cartbar-card-text">
+                        <p>Цвет: Кварц</p>
+                      </div>
+                    </div>
+                    <div class="cartbar-card-total">
+                      <div class="col">1x €255,99</div>
+                      <div class="col">€255,99</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartbar-footer">
+                  <div class="cartbar-total">
+                    <div class="cartbar-group">
+                      <div class="row">
+                        <div class="col">Сумма:</div>
+                        <div class="col">€539,36</div>
+                      </div>
+                      <div class="row">
+                        <div class="col">Скидка:</div>
+                        <div class="col">€64,40</div>
+                      </div>
+                    </div>
+                    <div class="cartbar-group">
+                      <div class="row">
+                        <div class="col">Итого:</div>
+                        <div class="col">€474,96</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('template/footer.html')
+
+  @@include('template/scripts.html')
+
+</body>
+
+</html>

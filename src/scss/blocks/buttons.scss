@@ -261,6 +261,21 @@
 	}
 }
 
+.back-link {
+	display: inline-flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 22px;
+	text-decoration: none;
+	text-transform: uppercase;
+	i {
+		font-size: 24px;
+		transform: rotate(90deg);
+	}
+}
+
 // .video {
 // 	display: flex;
 // 	align-items: center;
