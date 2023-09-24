@@ -169,6 +169,18 @@ $(document).ready(function () {
 		placeholder: "Страна",
 		allowClear: true
 	});
+	jQuery('#select_region_lk, #select_region_lk_second').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: "Выберите",
+		allowClear: true
+	});
+	jQuery('#select_country_lk, #select_country_lk_second').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: "Выберите",
+		allowClear: true
+	});
 });
 
 

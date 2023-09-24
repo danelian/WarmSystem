@@ -79,88 +79,159 @@
       <div class="container">
         <div class="lk-section default-wrapper">
           <div class="lk-head">
-            <h1 class="lk-title">Заказ #849555738</h1>
-            <a href="#" download="download" class="link-withicon"><i class="icomoon icon-download"></i> Скачать счет</a>
-            <a href="lk-orders.html" class="link">Вернуться к истории заказов</a>
+            <h1 class="lk-title">Настройки профиля</h1>
+            <a href="lk.html" class="link">Вернуться к учетной записи</a>
           </div>
-          <div class="lk-text">Метод оплаты: LHV</div>
-          <table class="table-style order-table">
-            <thead>
-              <tr>
-                <th>Товар</th>
-                <th>Количество</th>
-                <th>Цена</th>
-                <th>Сумма</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Керамический обогреватель FLYME 1200P</td>
-                <td>1</td>
-                <td>€255,99</td>
-                <td>€255,99</td>
-              </tr>
-              <tr>
-                <td>Керамический обогреватель FLYME 1200P</td>
-                <td>1</td>
-                <td>€255,99</td>
-                <td>€255,99</td>
-              </tr>
-              <tr>
-                <td>Керамический обогреватель FLYME 1200P</td>
-                <td>1</td>
-                <td>€255,99</td>
-                <td>€255,99</td>
-              </tr>
-              <tr class="soderjanie-itogo">
-                <td></td>
-                <td></td>
-                <td>
-                  <div class="item">Сумма:</div>
-                  <div class="item">Доставка:</div>
-                  <div class="item">Скидка:</div>
-                </td>
-                <td>
-                  <div class="item">€768,99</div>
-                  <div class="item">Бесплатно</div>
-                  <div class="item">€98,04</div>
-                </td>
-              </tr>
-              <tr class="soderjanie-itogo">
-                <td></td>
-                <td></td>
-                <td>
-                  <div class="item">К оплате:</div>
-                </td>
-                <td>
-                  <div class="item">€670,95</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="lk-section default-wrapper">
-          <div class="heading">
-            <h2 class="title-1">Данные о доставке</h2>
-          </div>
-          <div class="lk-delivery">
-            <div class="lk-delivery-cards">
-              <div class="lk-deliverycard">
-                <h4>Получатель</h4>
-                <p>Имя Фамилия</p>
-                <p>Номер телефона</p>
+          <div class="row-3">
+            <div class="col">
+              <div class="row-1">
+                <div class="form-title">Имя</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Михаил">
+                </div>
               </div>
-              <div class="lk-deliverycard">
-                <h4>Платежный адрес:</h4>
-                <p>Улица, дом и квартира</p>
-                <p>Город, страна и индекс</p>
+              <div class="row-1">
+                <div class="form-title">Фамилия</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Петров">
+                </div>
               </div>
-              <div class="lk-deliverycard">
-                <h4>Адрес доставки:</h4>
-                <p>Улица, дом и квартира</p>
-                <p>Город, страна и индекс</p>
+              <div class="row-1">
+                <div class="form-title">Телефон</div>
+                <div class="form-group">
+                  <input type="tel" class="form-input" placeholder="+372 1234 5678">
+                </div>
+              </div>
+              <div class="row-1">
+                <div class="form-title">Email</div>
+                <div class="form-group">
+                  <input type="email" class="form-input" placeholder="example@gmail.com">
+                </div>
               </div>
             </div>
+            <div class="col">
+              <div class="row-1">
+                <div class="form-title">Изменение пароля</div>
+                <div class="form-group">
+                  <input type="password" class="form-input" placeholder="Ваш текущий пароль">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-input" placeholder="Новый пароль">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-input" placeholder="Подтвердите пароль">
+                </div>
+                <button type="submit" class="link">Сохранить новый пароль</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row-1">
+                <div class="lk-form-title">Компания</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Название">
+                </div>
+              </div>
+              <div class="row-1">
+                <div class="lk-form-title">Регистрационный номер</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Номер">
+                </div>
+              </div>
+              <div class="row-1">
+                <div class="lk-form-title">KMKR номер</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Номер">
+                </div>
+              </div>
+              <div class="row-1">
+                <label for="checkboxForCompany" class="checkbox">
+                  <input type="checkbox" id="checkboxForCompany" checked>
+                  <span>Покупаю для компании</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lk-section default-wrapper">
+          <div class="heading">
+            <h2 class="title-1">Платежный адрес</h2>
+          </div>
+          <div class="row-3">
+            <div class="col">
+              <div class="row-1">
+                <div class="form-title">Город</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Город">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row-1">
+                <div class="form-title">Адрес</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Улица, дом и квартира">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row-1">
+                <div class="form-title">Регион/Уезд</div>
+                <div class="form-group">
+                  <select id="select_region_lk">
+                    <option></option>
+                    <option value="region1">Регион 1</option>
+                    <option value="region2">Регион 2</option>
+                    <option value="region3">Регион 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row-1">
+                <div class="form-title">Почтовый индекс</div>
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Индекс">
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row-1">
+                <div class="form-title">Страна</div>
+                <div class="form-group">
+                  <select id="select_country_lk">
+                    <option></option>
+                    <option value="region1">Регион 1</option>
+                    <option value="region2">Регион 2</option>
+                    <option value="region3">Регион 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row-1 mt-48">
+              <label for="checkboxAddress" class="checkbox">
+                <input type="checkbox" id="checkboxAddress" checked>
+                <span>Адрес доставки совпадает с платежным адресом</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="lk-section default-wrapper">
+          <div class="heading">
+            <h2 class="title-1">Уведомления</h2>
+          </div>
+          <div class="row-1">
+            <label for="uvedomleniya1" class="checkbox">
+              <input type="checkbox" id="uvedomleniya1">
+              <span>Я хочу получать письма с новостями и полезными статьями</span>
+            </label>
+          </div>
+          <div class="row-1">
+            <label for="uvedomleniya2" class="checkbox">
+              <input type="checkbox" id="uvedomleniya2">
+              <span>Я хочу получать письма об акциях и скидках</span>
+            </label>
           </div>
         </div>
       </div>
