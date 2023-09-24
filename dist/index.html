@@ -68,7 +68,7 @@
 					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-search"></i></button>
 				</form>
 				<a href="cart.html" class="btn-icon"><i class="icomoon icon-cart"></i></a>
-				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
+				<a data-fancybox href="#login" class="btn-icon"><i class="icomoon icon-user"></i></a>
 		</div>
 	</div>
 </header>
@@ -809,8 +809,56 @@
     </div>
   </div>
 </footer>
+	<div style="display: none; width: 640px;" class="modal" id="login">
+  <div class="modal-heading">
+    <h2 class="modal-title">Войти</h2>
+  </div>
+  <form action="" class="form">
+    <div class="form-group">
+      <input type="email" class="form-input" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-input" placeholder="Пароль">
+      <a href="#" class="forget-password">Не помню пароль</a>
+    </div>
+    <button type="submit" class="link">Войти</button>
+    <div class="form-bottom">
+      Еще нет аккаунта? <a data-fancybox href="#register">Зарегистрируйтесь</a>
+    </div>
+  </form>
+</div>
 
-	
+<div style="display: none; width: 640px;" class="modal" id="register">
+  <div class="modal-heading">
+    <h2 class="modal-title">Создать аккаунт</h2>
+  </div>
+  <form action="" class="form">
+    <div class="form-group">
+      <input type="text" class="form-input" placeholder="Имя">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-input" placeholder="Фамилия">
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-input" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-input" placeholder="Пароль">
+    </div>
+    <div class="form-group">
+      <label for="politika" class="checkbox">
+        <input type="checkbox" id="politika"><span>Я согласен с условиями <a href="#">политики конфиденциальности</a></span>
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="podpiska" class="checkbox">
+        <input type="checkbox" id="podpiska"><span>Я хочу получать рассылку о новинках, поступлениях и полезные статьи</span>
+      </label>
+    </div>
+    <button type="submit" class="link-input">Зарегистрироваться</button>
+    <div class="form-bottom">Уже есть аккаунт? <a data-fancybox href="#login">Войдите</a></div>
+  </form>
+</div>
 
 	<!-- Script-->
 <script src="js/jquery-3.4.1.min.js"></script>

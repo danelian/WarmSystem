@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Личный кабинет</title>
+
+  @@include('template/meta.html')
+</head>
+
+<body>
+
+  @@include('template/header.html')
+
+  <main>
+
+    <section class="lk">
+      <div class="container">
+        <div class="lk-section default-wrapper">
+          <div class="lk-heading">
+            <div class="col">
+              <h1 class="title-1">Привет, Олег</h1>
+            </div>
+            <div class="col">
+              <button class="link">Выйти</button>
+            </div>
+          </div>
+          <div class="lk-main">
+            <div class="lk-main-cards">
+              <div class="lk-maincard">
+                <div class="lk-maincard-title"><img src="img/icons/istoriya-zakazov.svg" alt="">История заказов</div>
+                <div class="lk-maincard-text">Просмотреть заказ, отменить или заказать вновь</div>
+                <a href="lk-orders.html" class="link">Перейти</a>
+              </div>
+              <div class="lk-maincard">
+                <div class="lk-maincard-title"><img src="img/icons/nastroyki_akkaunta.svg" alt="">История заказов</div>
+                <div class="lk-maincard-text">Просмотреть заказ, отменить или заказать вновь</div>
+                <a href="lk-settings.html" class="link">Перейти</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('template/footer.html')
+  @@include('template/modals.html')
+
+  @@include('template/scripts.html')
+
+</body>
+
+</html>

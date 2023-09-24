@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Личный кабинет - История заказов</title>
+
+  @@include('template/meta.html')
+</head>
+
+<body>
+
+  @@include('template/header.html')
+
+  <main>
+
+    <section class="lk">
+      <div class="container">
+        <div class="lk-section default-wrapper">
+          <div class="lk-heading">
+            <div class="col">
+              <h1 class="title-1">История заказов</h1>
+            </div>
+            <div class="col">
+              <a href="lk.html" class="link">Вернуться к учетной записи</a>
+            </div>
+          </div>
+          <table class="table-style orders-table">
+            <thead>
+              <tr>
+                <th>Дата заказа</th>
+                <th>Номер</th>
+                <th>Сумма</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>21/11/2022</td>
+                <td>849555738</td>
+                <td>€108,99</td>
+                <td><a href="#" download="download"><img src="img/icons/download-orange.svg" alt=""> Скачать счет</a></td>
+                <td><a href="lk-order.html">Подробности</a></td>
+              </tr>
+              <tr>
+                <td>01/01/2022</td>
+                <td>127653308</td>
+                <td>€45,45</td>
+                <td><a href="#" download="download"><img src="img/icons/download-orange.svg" alt=""> Скачать счет</a></td>
+                <td><a href="lk-order.html">Подробности</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="lk-section default-wrapper">
+          <div class="heading">
+            <h2 class="title-1">Проверьте статус заказа</h2>
+          </div>
+          <div class="text-row">
+            <div class="col">
+              <p>Узнайте статус вашего заказа на сайте транспортной компании, которую вы выбрали для доставки:</p>
+            </div>
+            <div class="col">
+              <p>Заранее скопируйте номер вашего заказа, чтобы ввести его при проверке статуса.</p>
+            </div>
+          </div>
+          <div class="logo-row">
+            <img src="img/lk/dpd.png" alt="dpd">
+            <img src="img/lk/omniva.png" alt="omniva">
+          </div>
+        </div>
+
+        <div class="lk-section default-wrapper">
+          <div class="heading">
+            <h2 class="title-1">Есть вопросы по заказу? Спросите нас</h2>
+          </div>
+          <div class="lk__contacts">
+            <div class="col">
+              <div class="contacts-item"><i class="icomoon icon-phone"></i><a href="tel:+37256661608">+372 5666 1608</a></div>
+              <div class="contacts-item"><i class="icomoon icon-postal"></i><a href="mailto:info@warmsystem.eu">info@warmsystem.eu</a></div>
+              <div class="contacts-item"><i class="icomoon icon-place"></i><p>Punane 50, Tallinn, 13619, Estonia</p></div>
+            </div>
+            <div class="col">
+              <div class="contacts-item"><i class="icomoon icon-tech"></i><p>Техподдержка: <a href="tel:+37256902030">+372 5690 2030</a></p></div>
+              <div class="row">
+                <a href="#" class="contacts-item"><img src="img/icons/whatsapp.svg" alt=""> WhatsApp</a>
+                <a href="#" class="contacts-item"><img src="img/icons/viber.svg" alt=""> Viber</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('template/footer.html')
+  @@include('template/modals.html')
+
+  @@include('template/scripts.html')
+
+</body>
+
+</html>

@@ -17,4 +17,27 @@
 			margin-bottom: 20px;
 		}
 	}
+	.form {
+		&-input {
+			width: 360px;
+			margin-right: 40px;
+		}
+		.checkbox {
+			width: 360px;
+		}
+		&-bottom {
+			width: 100%;
+			margin-top: 40px;
+			font-size: 17px;
+			font-weight: 400;
+			line-height: 1.2;
+			color: var(--font-color);
+			a {
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
 }
