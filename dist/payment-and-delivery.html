@@ -41,27 +41,30 @@
 <header class="header">
 	<div class="container header__container">
 		<a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
-		<ul class="nav-menu">
-				<li><a href="/">Главная</a></li>
-				<li class="menu-item-has-children">
-					<a href="catalog.html">Каталог</a>
-					<ul class="sub-menu">
-						<li><a href="#">Обогреватели</a></li>
-						<li><a href="#">Очистители</a></li>
-						<li><a href="#">Увлажнители</a></li>
-						<li><a href="#">Осушители</a></li>
-						<li><a href="#">Портативные кондиционеры</a></li>
-					</ul>
-				</li>
-				<li><a href="reviews.html">Отзывы</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="contacts.html">Контакты</a></li>
-		</ul>
-		<div class="lang">
-			<div class="lang-item"><img src="img/flags/estonia.svg" alt=""></div>
-			<div class="lang-item"><img src="img/flags/usa.svg" alt=""></div>
+		<div class="header__nav" id="navMenu">
+			<ul class="nav-menu">
+					<li><a href="/">Главная</a></li>
+					<li class="menu-item-has-children">
+						<a href="catalog.html">Каталог</a>
+						<i class="icomoon icon-chevron"></i>
+						<ul class="sub-menu">
+							<li><a href="#">Обогреватели</a></li>
+							<li><a href="#">Очистители</a></li>
+							<li><a href="#">Увлажнители</a></li>
+							<li><a href="#">Осушители</a></li>
+							<li><a href="#">Портативные кондиционеры</a></li>
+						</ul>
+					</li>
+					<li><a href="reviews.html">Отзывы</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+			<div class="lang">
+				<div class="lang-item"><img src="img/flags/estonia.svg" alt=""></div>
+				<div class="lang-item"><img src="img/flags/usa.svg" alt=""></div>
+			</div>
+			<a href="tel:+37256661608" class="header-link">+372 5666 1608</a>
 		</div>
-		<a href="tel:+37256661608" class="header-link">+372 5666 1608</a>
 		<div class="header-bar">
 				<form class="search-label" id="searchBarLabel">
 					<input type="search" class="search-field search-input" placeholder="">
@@ -69,6 +72,7 @@
 				</form>
 				<a href="cart.html" class="btn-icon"><i class="icomoon icon-cart"></i></a>
 				<a data-fancybox href="#login" class="btn-icon"><i class="icomoon icon-user"></i></a>
+				<div class="btn-icon" id="toggleMenu"><i class="icomoon icon-burger"></i></div>
 		</div>
 	</div>
 </header>

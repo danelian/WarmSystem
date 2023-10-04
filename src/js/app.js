@@ -1,5 +1,64 @@
 $(document).ready(function () {
 
+	var liElements = document.getElementsByTagName('.nav-menu li');
+	for (var i = 0; i < liElements.length; i++) {
+		var li = liElements[i];
+		var submenu = li.getElementsByClassName('submenu')[0];
+		if (submenu) {
+			var icon = document.createElement('i');
+			icon.className = 'icomoon icon-chevron';
+			li.insertBefore(icon, submenu);
+		}
+	}
+
+
+  // -------------------- Acordion FAQ -------------------------
+  const accordeonMenuItems = document.querySelectorAll('.nav-menu li.menu-item-has-children')
+  accordeonMenuItems.forEach((item) => {
+    const accordeonMenuButton = item.querySelector('.nav-menu li.menu-item-has-children i')
+    accordeonMenuButton.addEventListener('click', () => {
+      const openMenuItem = document.querySelector('.open')
+      toggleMenuItem(item)
+      if (openMenuItem && openMenuItem !== item) {
+        toggleMenuItem(openMenuItem)
+      }
+    })
+  })
+  const toggleMenuItem = (item) => {
+    const accordeonMenuContent = item.querySelector('.nav-menu li.menu-item-has-children .sub-menu')
+    if (item.classList.contains('open')) {
+      accordeonMenuContent.removeAttribute('style')
+      item.classList.remove('open')
+    } else {
+      accordeonMenuContent.style.height = accordeonMenuContent.scrollHeight + 'px'
+      item.classList.add('open')
+    }
+  }
+
+
+	// Получаем ссылки на элементы DOM
+	const toggleMenu = document.getElementById('toggleMenu');
+	const toggleMenuIcon = toggleMenu.querySelector('i');
+	const navMenu = document.getElementById('navMenu');
+	// Функция обработки нажатия на кнопку
+	function toggleClasses() {
+		// Проверяем наличие класса 'icon-remove' у элемента i
+		if (toggleMenuIcon.classList.contains('icon-remove')) {
+		// Если класс уже присутствует, удаляем его и скрываем меню
+		toggleMenuIcon.classList.remove('icon-remove');
+		navMenu.classList.remove('show');
+		document.querySelector('body').classList.remove('dis-scroll');
+		} else {
+		// Если класс отсутствует, добавляем его и показываем меню
+		toggleMenuIcon.classList.add('icon-remove');
+		navMenu.classList.add('show');
+		document.querySelector('body').classList.add('dis-scroll');
+		}
+	}
+	// Добавляем обработчик события на нажатие кнопки
+	toggleMenu.addEventListener('click', toggleClasses);
+
+
 	// Search (Header)
 	let searchHiddenInput = document.querySelector("#searchBarLabel .search-input");
 	let searchToggleBtn = document.querySelector("#searchToggleBtn");
@@ -267,169 +326,3 @@ var productMain = new Swiper(".productMain", {
 		swiper: productSecond,
 	},
 });
-
-// var swiper = new Swiper(".brandsSwiper", {
-// 	slidesPerView: "auto",
-// 	spaceBetween: 30,
-// 	freeMode: true,
-// 	// pagination: {
-// 	// 	el: ".swiper-pagination",
-// 	// 	clickable: true,
-// 	// },
-// });
-// var noveltySwiper = new Swiper(".noveltySwiper", {
-// 	spaceBetween: 20,
-// 	slidesPerView: 1,
-// 	loop: true,
-// 	autoplay: {
-// 		delay: 5000,
-// 		disableOnInteraction: false,
-// 	},
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// });
-// var newsblSwiper = new Swiper(".newsblSwiper", {
-// 	spaceBetween: 20,
-// 	slidesPerView: 1,
-// 	loop: true,
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// 	breakpoints: {
-// 		320: {
-// 			slidesPerView: 1,
-// 			spaceBetween: 20
-// 		},
-// 		500: {
-// 			slidesPerView: 2,
-// 		},
-// 		768: {
-// 			slidesPerView: 3,
-// 			spaceBetween: 24
-// 		},
-// 		1025: {
-// 			spaceBetween: 36
-// 		}
-// 	}
-// });
-// var blogblSwiper = new Swiper(".blogblSwiper", {
-// 	spaceBetween: 20,
-// 	slidesPerView: 1,
-// 	loop: true,
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// 	breakpoints: {
-// 		320: {
-// 			slidesPerView: 1,
-// 			spaceBetween: 20
-// 		},
-// 		500: {
-// 			slidesPerView: 2,
-// 		},
-// 		768: {
-// 			slidesPerView: 3,
-// 			spaceBetween: 24
-// 		},
-// 		1025: {
-// 			spaceBetween: 36
-// 		}
-// 	}
-// });
-// var similarblSwiper = new Swiper(".similarblSwiper", {
-// 	spaceBetween: 20,
-// 	slidesPerView: 2,
-// 	loop: true,
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// 	breakpoints: {
-// 		320: {
-// 			slidesPerView: 2,
-// 			spaceBetween: 20
-// 		},
-// 		768: {
-// 			slidesPerView: 3,
-// 			spaceBetween: 24
-// 		},
-// 		1025: {
-// 			spaceBetween: 36,
-// 			slidesPerView: 4,
-// 		}
-// 	}
-// });
-// var recomblSwiper = new Swiper(".recomblSwiper", {
-// 	spaceBetween: 20,
-// 	slidesPerView: 2,
-// 	loop: true,
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// 	breakpoints: {
-// 		320: {
-// 			slidesPerView: 2,
-// 			spaceBetween: 20
-// 		},
-// 		768: {
-// 			slidesPerView: 3,
-// 			spaceBetween: 24
-// 		},
-// 		1025: {
-// 			spaceBetween: 36,
-// 			slidesPerView: 4,
-// 		}
-// 	}
-// });
-// var complectblSwiper = new Swiper(".complectblSwiper", {
-// 	spaceBetween: 20,
-// 	slidesPerView: 2,
-// 	loop: true,
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// 	breakpoints: {
-// 		320: {
-// 			slidesPerView: 2,
-// 			spaceBetween: 20
-// 		},
-// 		768: {
-// 			slidesPerView: 3,
-// 			spaceBetween: 24
-// 		},
-// 		1025: {
-// 			spaceBetween: 36,
-// 			slidesPerView: 2,
-// 		}
-// 	}
-// });
-
-// var prodSecondSwiper = new Swiper(".prodSecondSwiper.swiper-container", {
-// 	loop: true,
-// 	spaceBetween: 16,
-// 	slidesPerView: 4,
-// 	freeMode: true,
-// 	watchSlidesProgress: true,
-// });
-// var prodFirstSwiper = new Swiper(".prodFirstSwiper.swiper-container", {
-// 	loop: true,
-// 	spaceBetween: 10,
-// 	navigation: {
-// 		nextEl: ".product-slider .swiper-button-next",
-// 		prevEl: ".product-slider .swiper-button-prev",
-// 	},
-// 	pagination: {
-// 		el: '.swiper-pagination',
-// 		type: 'bullets',
-// 		clickable: true,
-// 	},
-// 	thumbs: {
-// 		swiper: prodSecondSwiper,
-// 	},
-// });

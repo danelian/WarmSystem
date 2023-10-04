@@ -355,3 +355,13 @@
 // 		}
 // 	}
 // }
+
+@include tablet {
+	.btn-icon {
+		width: 26px;
+		height: 26px;
+		i {
+			font-size: 26px;
+		}
+	}
+}
