@@ -22,10 +22,6 @@
 }
 
 
-// .swiper-container {
-//   padding-bottom: 50px;
-// }
-
 .swiper-button-prev,
 .swiper-button-next {
   &::after {
@@ -52,16 +48,6 @@
 .swiper-button-next::after {
   content: '\e900';
 }
-// .swiper-button-prev {
-//   left: -21px;
-// }
-// .swiper-button-next {
-//   right: -21px;
-// }
-// .swiper-button-next::after {
-//   transform: rotate(-90deg);
-//   margin-left: 5px;
-// }
 
 .swiper-bottom {
   display: flex;
@@ -99,5 +85,35 @@
     width: 40px;
     border-radius: 0;
     background-color: transparent;
+  }
+}
+
+
+@include tablet {
+  .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    margin: 0 3px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .swiper-bottom {
+    margin-top: 20px;
+    .swiper-pagination-fraction {
+      font-size: 16px;
+    }
+  }
+  .swiper-nav {
+    gap: 10px;
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 30px;
+    }
   }
 }

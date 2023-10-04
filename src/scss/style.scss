@@ -9,7 +9,6 @@
 
   --content-width: 1160px;
   --container-offset: 15px;
-  // --containerMobile-offset: 10px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
@@ -27,7 +26,6 @@
   // --darkGrey-color: #4B4B4B;
 
   --border-radius: 15px;
-  // --default-gap: 36px;
 }
 
 /***** Mixins *****/
@@ -102,12 +100,7 @@
 @import "widgets/lk.scss";
 
 
-@include tablet {
-  :root {
-    // --border-radius: 20px;
-    --default-gap: 24px;
-  }
-}
+
 @media screen and (max-width: 390px) {
   :root {
     --container-offset: 10px;

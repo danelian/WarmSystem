@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+	// ---------- Добавление иконки для раскрытия sub-menu -------------
 	var liElements = document.getElementsByTagName('.nav-menu li');
 	for (var i = 0; i < liElements.length; i++) {
 		var li = liElements[i];
@@ -10,9 +11,7 @@ $(document).ready(function () {
 			li.insertBefore(icon, submenu);
 		}
 	}
-
-
-  // -------------------- Acordion FAQ -------------------------
+  // -------------------- РАСКРЫТИЕ SUB-MENU -------------------------
   const accordeonMenuItems = document.querySelectorAll('.nav-menu li.menu-item-has-children')
   accordeonMenuItems.forEach((item) => {
     const accordeonMenuButton = item.querySelector('.nav-menu li.menu-item-has-children i')
@@ -34,28 +33,21 @@ $(document).ready(function () {
       item.classList.add('open')
     }
   }
-
-
-	// Получаем ссылки на элементы DOM
+	// -------------------- BURGER-MENU -------------------------
 	const toggleMenu = document.getElementById('toggleMenu');
 	const toggleMenuIcon = toggleMenu.querySelector('i');
 	const navMenu = document.getElementById('navMenu');
-	// Функция обработки нажатия на кнопку
 	function toggleClasses() {
-		// Проверяем наличие класса 'icon-remove' у элемента i
 		if (toggleMenuIcon.classList.contains('icon-remove')) {
-		// Если класс уже присутствует, удаляем его и скрываем меню
 		toggleMenuIcon.classList.remove('icon-remove');
 		navMenu.classList.remove('show');
 		document.querySelector('body').classList.remove('dis-scroll');
 		} else {
-		// Если класс отсутствует, добавляем его и показываем меню
 		toggleMenuIcon.classList.add('icon-remove');
 		navMenu.classList.add('show');
 		document.querySelector('body').classList.add('dis-scroll');
 		}
 	}
-	// Добавляем обработчик события на нажатие кнопки
 	toggleMenu.addEventListener('click', toggleClasses);
 
 

@@ -1,4 +1,8 @@
 .catbl {
+  .default-wrapper {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   .heading {
     display: flex;
     align-items: flex-end;
@@ -11,10 +15,9 @@
     .section-text {
       width: 360px;
     }
-    .link {
-      margin-left: auto;
-      margin-bottom: 1.5rem;
-    }
+  }
+  .link {
+    margin: -40px 0 36px auto;
   }
   &__cards {
     display: grid; 
@@ -78,5 +81,46 @@
     .catcard-name {
       background-color: rgba(232, 131, 32, 1);
     }
+  }
+}
+
+@include tablet {
+  .catbl {
+    .link {
+      margin: 28px 0 0 0;
+      order: 1;
+    } 
+  }
+  .catcard {
+    &-name {
+      top: 10px;left: 10px;
+      max-width: calc(100% - 20px);
+      padding: 6px 10px 5px 10px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@include mobile {
+  .catbl {
+    .default-wrapper {
+      padding-bottom: 36px;
+    }
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; 
+      grid-template-areas: none;
+      .one,.two,.three,.four,.five { grid-area: auto; }
+      .catcard {
+        aspect-ratio: 28 / 14;
+      }
+      .one {
+        .catcard {
+          aspect-ratio: 1 / 1;
+        }
+      }
+    } 
   }
 }

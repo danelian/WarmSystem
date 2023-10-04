@@ -74,3 +74,53 @@
     }
   }
 }
+
+@include tablet {
+  .special {
+    .default-wrapper,
+    .default-wrapper-dark {
+      .title-1 {
+        font-size: 22px;
+        span {
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .special {
+    &__container {
+      justify-content: flex-start;
+      flex-direction: column;
+      .col {
+        &:nth-child(1) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        &:nth-child(2) {
+          width: 100%;
+        }
+      }
+    }
+    &__tooltip {
+      bottom: 10px;
+      left: 10px;
+      padding: 5px;
+      width: calc(100% - 20px);
+    }
+    .default-wrapper,
+    .default-wrapper-dark {
+      .title-1 {
+        span {
+          display: inline;
+          margin-left: 0;
+        }
+      }
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}

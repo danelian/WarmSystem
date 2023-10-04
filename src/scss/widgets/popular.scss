@@ -1,4 +1,11 @@
 .popular {
+  .default-wrapper {
+    align-items: flex-start;
+    justify-content: flex-start;
+    >.link-dark {
+      margin-top: 28px;
+    }
+  }
   .heading {
     .title-1 {
       margin-left: 80px;
@@ -8,9 +15,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .link-dark {
-      margin-top: 28px;
-    }
   }
   &Swiper {
     .swiper-nav {
@@ -19,6 +23,30 @@
       .swiper-button-prev::after,
       .swiper-button-next::after {
         color: #292932;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .popular {
+    .default-wrapper {
+      >.link-dark {
+        order: 1;
+      }
+    }
+    .heading {
+      .title-1 {
+        margin-left: 0;
+      }
+      .section-text {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+    &Swiper {
+      .swiper-nav {
+        margin-bottom: 16px;
       }
     }
   }
