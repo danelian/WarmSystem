@@ -249,7 +249,7 @@ var recomSwiper = new Swiper('.recomSwiper', {
 	},
 });
 var reviewsSwiper = new Swiper('.reviewsSwiper', {
-	slidesPerView: 'auto',
+	slidesPerView: 1,
 	// loop: true,
 	spaceBetween: 10,
 	navigation: {
@@ -260,6 +260,17 @@ var reviewsSwiper = new Swiper('.reviewsSwiper', {
 		el: '.swiper-pagination',
 		type: 'fraction',
 	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		600: {
+			slidesPerView: 2,
+		},
+		1025: {
+			slidesPerView: 'auto',
+		},
+	}
 });
 var popularSwiper = new Swiper(".popularSwiper, .withitSwiper, .canlikeSwiper, .recentSwiper", {
 	spaceBetween: 10,
