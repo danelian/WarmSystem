@@ -86,6 +86,7 @@
 	}
 	.accept {
 		margin: 10px 0 !important;
+		width: 100%;
 		font-size: 15px;
 		line-height: 1.15;
 		color: #6f6f6f;
@@ -126,6 +127,9 @@
 			}
 		}
 	}
+	.link, .link-input {
+		margin-top: 12px;
+	}
 }
 
 .form-subs {
@@ -147,6 +151,21 @@
 			&:before {
 				background-color: var(--global-color);
 			}
+		}
+	}
+}
+
+.form-login {
+	.form-group {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.form-input {
+			width: calc(65% - 20px);
+		}
+		.forget-password {
+			width: calc(35% - 20px);
+			margin-left: 40px;
 		}
 	}
 }
@@ -254,54 +273,6 @@
 	}
 }
 
-
-/* Radio */
-// .radio {
-// 	display: block;
-// 	margin: 0 0 20px 0;
-// 	cursor: pointer;
-// 	position: relative;
-// 	user-select: none;
-// }
-// .radio input[type=radio] {
-// 	position: absolute;
-// 	z-index: -1;
-// 	opacity: 0;
-// 	display: block;
-// 	width: 0;
-// 	height: 0;
-// }
-// .radio span {
-// 	display: inline-block;
-// 	position: relative;
-// 	padding: 0 0 0 37px;
-// 	font-size: 18px;
-// 	line-height: 25px;
-// 	font-weight: 300;
-// 	color: #000;
-// }
-// .radio span:before {
-// 	content: "";
-// 	display: inline-block;
-// 	position: absolute;
-// 	left: 0;
-// 	top: 0;
-// 	width: 25px;
-// 	height: 25px;
-// 	border-radius: 100%;
-// 	background-color: #EFEFEF;
-// }
-// .radio input[type=radio]:checked+span:after {
-// 	content: "";
-// 	display: inline-block;
-// 	position: absolute;
-// 	left: 4px;
-// 	top: 4px;
-// 	width: 17px;
-// 	height: 17px;
-// 	border-radius: 100%;
-// 	background-color: #292D31;
-// }
 
 input[type="number"] {
 	-moz-appearance: textfield;
@@ -503,6 +474,63 @@ input[type="number"]::-webkit-inner-spin-button {
 		}
 		&:nth-child(3n) {
 			margin-right: 0;
+		}
+	}
+}
+
+@include mobile {
+	.form {
+		&-title {
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+		&-tooltext {
+			margin-top: 4px;
+			margin-bottom: 8px;
+			font-size: 15px;
+			line-height: 1.2;
+		}
+		&-group {
+			margin-bottom: 10px;
+			a {
+				font-size: 12px;
+			}
+		}
+		&-input {
+			height: 44px;
+			padding: 13px 20px;
+			font-size: 15px;
+			line-height: 18px;
+		}
+		textarea {
+			min-height: 44px;
+			height: 80px;
+			padding: 13px 20px;
+			font-size: 15px;
+			line-height: 18px;
+		}
+		.accept {
+			font-size: 12px;
+		}
+		&-item {
+			.form-item {
+				.form-title {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.form-login {
+		.form-group {
+			align-items: flex-start;
+			.form-input {
+				width: 100%;
+			}
+			.forget-password {
+				width: 100%;
+				margin-left: 0;
+				margin-top: 10px;
+			}
 		}
 	}
 }

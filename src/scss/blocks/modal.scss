@@ -1,43 +1,73 @@
 /*------ modal ------*/
-.modal {
-	padding: 60px 40px;
-	border-radius: var(--border-radius);
-	background: #f4f4f4;
-	&-heading {
-		margin-bottom: 40px;
-	}
-	&-title {
-		margin-top: 0;
-		margin-bottom: 0;
-		color: #131313;
-		font-size: 30px;
-		font-weight: 400;
-		line-height: 1.2;
-		&:not(:last-child) {
-			margin-bottom: 20px;
+	.modal {
+		padding: 60px 40px;
+		border-radius: var(--border-radius);
+		background: #f4f4f4;
+		&-heading {
+			margin-bottom: 40px;
 		}
-	}
-	.form {
-		&-input {
-			width: 360px;
-			margin-right: 40px;
-		}
-		.checkbox {
-			width: 360px;
-		}
-		&-bottom {
-			width: 100%;
-			margin-top: 40px;
-			font-size: 17px;
+		&-title {
+			margin-top: 0;
+			margin-bottom: 0;
+			color: #131313;
+			font-size: 30px;
 			font-weight: 400;
 			line-height: 1.2;
-			color: var(--font-color);
-			a {
-				text-decoration: underline;
-				&:hover {
-					text-decoration: none;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		.form {
+			&-bottom {
+				width: 100%;
+				margin-top: 40px;
+				font-size: 17px;
+				font-weight: 400;
+				line-height: 1.2;
+				color: var(--font-color);
+				a {
+					text-decoration: underline;
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
 		}
 	}
+
+@include tablet {
+	/*------ modal ------*/
+	.modal {
+		padding: 40px 24px;
+		&-heading {
+			margin-bottom: 30px;
+		}
+		&-title {
+			font-size: 26px;
+		}
+		.form {
+			&-bottom {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+@include mobile {
+/*------ modal ------*/
+.modal {
+	padding: 30px 10px;
+	&-title {
+		font-size: 22px;
+		&:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+	.form {
+		&-bottom {
+			margin-top: 30px;
+			font-size: 12px;
+		}
+	}
+}
 }

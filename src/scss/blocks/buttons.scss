@@ -295,4 +295,19 @@
 			font-size: 26px;
 		}
 	}
+	.link-withicon {
+		i {
+			margin-right: 8px;
+			font-size: 18px;
+		}
+		span {
+			font-size: 15px;
+		}
+	}
+	.link,
+	.link-input,
+	.link-dark,
+	.link-grey {
+		font-size: 15px;
+	}
 }

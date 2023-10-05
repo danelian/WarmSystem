@@ -688,6 +688,19 @@ th {
   .btn-icon i {
     font-size: 26px;
   }
+  .link-withicon i {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  .link-withicon span {
+    font-size: 15px;
+  }
+  .link,
+.link-input,
+.link-dark,
+.link-grey {
+    font-size: 15px;
+  }
 }
 /*-----title----*/
 .heading-row {
@@ -2005,6 +2018,7 @@ th {
 }
 .form .accept {
   margin: 10px 0 !important;
+  width: 100%;
   font-size: 15px;
   line-height: 1.15;
   color: #6f6f6f;
@@ -2026,6 +2040,9 @@ th {
 .form-item .form-item .form-title {
   font-size: 17px;
 }
+.form .link, .form .link-input {
+  margin-top: 12px;
+}
 
 .form-subs .form-group {
   margin-bottom: 0;
@@ -2046,6 +2063,19 @@ th {
 }
 .form-subs .link:hover:before {
   background-color: var(--global-color);
+}
+
+.form-login .form-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form-login .form-group .form-input {
+  width: calc(65% - 20px);
+}
+.form-login .form-group .forget-password {
+  width: calc(35% - 20px);
+  margin-left: 40px;
 }
 
 /* Checkbox */
@@ -2140,7 +2170,6 @@ th {
   border-color: var(--font-color);
 }
 
-/* Radio */
 input[type=number] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
@@ -2341,6 +2370,54 @@ input[type=number]::-webkit-inner-spin-button {
   margin-right: 0;
 }
 
+@media screen and (max-width: 576px) {
+  .form-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .form-tooltext {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .form-group a {
+    font-size: 12px;
+  }
+  .form-input {
+    height: 44px;
+    padding: 13px 20px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .form textarea {
+    min-height: 44px;
+    height: 80px;
+    padding: 13px 20px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .form .accept {
+    font-size: 12px;
+  }
+  .form-item .form-item .form-title {
+    font-size: 16px;
+  }
+  .form-login .form-group {
+    align-items: flex-start;
+  }
+  .form-login .form-group .form-input {
+    width: 100%;
+  }
+  .form-login .form-group .forget-password {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
 /*------ modal ------*/
 .modal {
   padding: 60px 40px;
@@ -2361,13 +2438,6 @@ input[type=number]::-webkit-inner-spin-button {
 .modal-title:not(:last-child) {
   margin-bottom: 20px;
 }
-.modal .form-input {
-  width: 360px;
-  margin-right: 40px;
-}
-.modal .form .checkbox {
-  width: 360px;
-}
 .modal .form-bottom {
   width: 100%;
   margin-top: 40px;
@@ -2383,6 +2453,37 @@ input[type=number]::-webkit-inner-spin-button {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1024px) {
+  /*------ modal ------*/
+  .modal {
+    padding: 40px 24px;
+  }
+  .modal-heading {
+    margin-bottom: 30px;
+  }
+  .modal-title {
+    font-size: 26px;
+  }
+  .modal .form-bottom {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  /*------ modal ------*/
+  .modal {
+    padding: 30px 10px;
+  }
+  .modal-title {
+    font-size: 22px;
+  }
+  .modal-title:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  .modal .form-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+}
 .charact-tags {
   position: absolute;
   top: 4px;
