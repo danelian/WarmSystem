@@ -184,7 +184,7 @@
       <li><a href="#">Портативные кондиционеры</a></li>
     </ul>
     <div class="catalog__filters">
-      <div class="prodcount">20 товаров</div>
+      <div class="catalog__sidebar-btn" id="catSidebarToggle">Фильтры <i class="icomoon icon-fliter"></i></div>
       <form class="woocommerce-ordering" method="get">
         <select name="orderby" id="orderby" class="orderby js-example-basic-single">
           <option value="popular" selected="selected">По популярности</option>
@@ -192,13 +192,14 @@
           <option value="popular3">По популярности 3</option>
         </select>
       </form>
+      <div class="prodcount">20 товаров</div>
     </div>
     <div class="catalog__container">
       <div class="catalog__sidebar" id="catSidebar">
-        <!-- <div class="catalog__sidebar-header desktop-hidden">
-          Фильтры
-          <div class="btn-toggle" id="catSidebarClose"><i class="icomoon icon-close"></i></div>
-        </div> -->
+        <div class="catalog__sidebar-header">
+          Фильтры <div id="catSidebarClose"><i class="icomoon icon-remove"></i></div>
+        </div>
+        <button class="link filter-reset">Очистить фильтры</button>
         <div class="catalog__sidebar-item catalog__sidebar-item-open">
           <h3 class="catalog__sidebar-title">Категории</h3>
           <div class="catalog__sidebar-body">

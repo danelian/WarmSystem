@@ -236,3 +236,25 @@
 .soderjanie-itogo:last-child td {
   border-bottom: 0;
 }
+
+
+@include tablet {
+  .charact-tags {
+    li {
+      padding: 3px 8px;
+      font-size: 12px;
+      border-radius: 7px;
+    }
+  }
+  .video {
+    .btn-play {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  .sticky, .stop {
+    position: relative !important;
+    top: auto !important;
+
+  }
+}

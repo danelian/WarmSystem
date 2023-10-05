@@ -39,32 +39,26 @@
 }
 
 @include tablet {
-	/*-----breadcrumbs-----*/
-	.kama_breadcrumbs {
-		padding: 10px 0;
-		font-size: 14px;
-		.kb_sep {
-			i {
-				font-size: 8px;
-				margin: 0 8px;
-			}
+/*-----breadcrumbs-----*/
+.kama_breadcrumbs,
+.woocommerce-breadcrumb {
+	row-gap: 2px;
+	padding: 2px 0;
+	margin-bottom: 20px;
+	font-size: 12px;
+	line-height: 14px;
+	span {
+		line-height: 14px;
+	}
+	a {
+		line-height: 14px;
+	}
+	.kb_sep {
+		i {
+			font-size: 14px;
+			line-height: 14px !important;
+			margin: 0 2px;
 		}
 	}
 }
-
-@include mobile {
-	/*-----breadcrumbs-----*/
-	.kama_breadcrumbs {
-		font-size: 12px;
-		line-height: 14px;
-		a, span {
-			line-height: 14px;
-		}
-		.kb_sep {
-			i {
-				font-size: 7px;
-				line-height: 14px !important;
-			}
-		}
-	}
 }

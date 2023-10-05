@@ -51,6 +51,25 @@ $(document).ready(function () {
 	toggleMenu.addEventListener('click', toggleClasses);
 
 
+	// -------------------- CATALOG FILTER -------------------------
+		const catSidebar = document.getElementById('catSidebar');
+		const catSidebarToggle = document.getElementById('catSidebarToggle');
+		const catSidebarClose = document.getElementById('catSidebarClose');
+		if (catSidebarToggle) {
+			catSidebarToggle.addEventListener('click', () => {
+				catSidebar.classList.add('active');
+				document.querySelector('body').classList.add('dis-scroll');
+			})
+		}
+		if (catSidebarClose) {
+			catSidebarClose.addEventListener('click', () => {
+				catSidebar.classList.remove('active');
+				document.querySelector('body').classList.remove('dis-scroll');
+			})
+		}
+	
+
+
 	// Search (Header)
 	let searchHiddenInput = document.querySelector("#searchBarLabel .search-input");
 	let searchToggleBtn = document.querySelector("#searchToggleBtn");
@@ -126,18 +145,7 @@ $(document).ready(function () {
 	}).filter(':first').click();
 	
 
-
 	//--------------- fancybox -----------
-	$('[data-fancybox-popup]').fancybox({
-		closeExisting: true,
-		smallBtn: false,
-		toolbar: false,
-		autoFocus: false,
-		hash: false,
-		touch: false
-	});
-	// FANCYBOX CERTIFICATE
-	// ====================
 	$('[data-fancybox-gallery]').fancybox({
 		transitionEffect: 'fade',
 		animationEffect: false,
@@ -148,13 +156,13 @@ $(document).ready(function () {
 		backFocus: false,
 		lang: 'ru',
 		hideScrollbar: false,
-		// i18n: {
-		// 	ru: {
-		// 		CLOSE: 'Закрыть',
-		// 		ZOOM: 'Увеличить',
-		// 		FULL_SCREEN: 'На весь экран',
-		// 	}
-		// },
+		i18n: {
+			ru: {
+				CLOSE: 'Закрыть',
+				ZOOM: 'Увеличить',
+				FULL_SCREEN: 'На весь экран',
+			}
+		},
 		buttons: [
 			"zoom",
 			"fullScreen",
@@ -312,12 +320,25 @@ var teamSwiper = new Swiper(".teamSwiper", {
 		},
 	}
 });
+
 var productSecond = new Swiper(".productSecond", {
 	spaceBetween: 10,
-	slidesPerView: 'auto',
-	direction: "vertical",
+	slidesPerView: 4,
+	direction: "horizontal",
 	freeMode: true,
 	watchSlidesProgress: true,
+	breakpoints: {
+		320: {
+			direction: "horizontal",
+			slidesPerView: 4,
+		},
+		500: {
+			slidesPerView: 'auto',
+		},
+		1024: {
+			direction: "vertical",
+		},
+	}
 });
 var productMain = new Swiper(".productMain", {
 	spaceBetween: 10,

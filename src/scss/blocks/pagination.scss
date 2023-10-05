@@ -39,3 +39,31 @@
     }
   }
 }
+
+@include tablet {
+  /*-----pagination-----*/
+  .pagination {
+    &-info {
+      font-size: 14px;
+    }
+  }
+}
+
+@include mobile {
+  /*-----pagination-----*/
+  .pagination {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    &-info {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    &>.page-numbers {
+      margin: 0;
+      .page-numbers {
+        font-size: 12px;
+      }
+    }
+  }
+}

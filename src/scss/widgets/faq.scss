@@ -36,3 +36,44 @@
     }
   }
 }
+
+@include tablet {
+  .faq {
+    .page-heading {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    &-form {
+      .default-wrapper {
+        padding-top: 30px;
+      }
+      .heading {
+        .title-1 {
+          span {
+            &:nth-child(1) {
+              display: inline;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .form {
+        .row {
+          display: flex;
+          .form-group {
+            width: 100%;
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+          }
+        }
+        textarea {
+          width: 100%;
+        }
+        .link-input {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

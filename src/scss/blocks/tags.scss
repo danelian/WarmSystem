@@ -30,3 +30,32 @@
     }
   }
 }
+
+@include tablet {
+  .tags {
+    align-items: flex-start;
+    justify-content: flex-start;
+    li {
+      margin: 0 4px 7px 4px;
+      a {
+        padding: 7px 12px;
+        font-size: 12px;
+        line-height: 12px;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .tags {
+    li {
+      a {
+        padding: 7px 7px;
+        font-size: 10px;
+        line-height: 10px;
+        border-radius: 15px;
+      }
+    }
+  }
+}

@@ -64,7 +64,6 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 1.2;
-    // color: var(--fontSecond-color);
   }
 }
 .accordion-open {
@@ -75,24 +74,27 @@
   }
 }
 
-// @include mobile {
-//   .accordion-item {
-//     padding-right: 0;
-//   }
-//   .accordion-title,
-//   .accordion-title h3 {
-//     width: 100%;
-//     font-size: 16px;
-//   }
-//   .accordion-button {
-//     width: 20px;
-//     height: 20px;
-//   }
-//   .accordion-content {
-//     p {
-//       font-size: 16px;
-//       width: 100%;
-//     }
-//   }
-// }
-
+@include tablet {
+  .accordion-item {
+    padding: 16px 8px 16px 0;
+  }
+  .accordion-title,
+  .accordion-title h3 {
+    font-size: 16px;
+  }
+  .accordion-button {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+    &:before,
+    &:after {
+      height: 2px;
+    }
+  }
+  .accordion-content {
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+}

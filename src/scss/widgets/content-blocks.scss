@@ -241,3 +241,23 @@
     }
   }
 }
+
+@include tablet {
+  .delivery-card {
+    font-size: 16px;
+    &-head {
+      padding: 20px 10px;
+      min-height: 74px;
+      &:not(:last-child):before {
+        left: 10px;right: 10px;
+        width: calc(100% - 20px);
+      }
+    }
+    &-content {
+      padding: 20px 10px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -460,3 +460,262 @@
     }
   }
 }
+
+
+@include tablet {
+  .product {
+    &__container {
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-bottom: 70px;
+    }
+    &__slider {
+      width: 100%;
+      max-width: 500px;
+      flex-direction: column;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    &Second {
+      width: 100%;
+      height: 74px;
+      .swiper-slide {
+        width: 74px;
+        height: 74px;
+      }
+    }
+    &Main {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &__info {
+      width: 100%;
+      .rating {
+        margin-top: 0;
+        align-items: flex-start;
+        .stars {
+          margin-top: 0;
+          width: 75px;
+          height: 15px;
+        }
+        .stars .progress {
+          height: 15px;
+        }
+        .rating-agregate {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+    &__name {
+      font-size: 22px;
+    }
+    &__row {
+      margin-bottom: 20px;
+    }
+    &__price {
+      margin-right: 0;
+      .current {
+        font-size: 17px;
+      }
+      .old {
+        margin-right: 10px;
+        font-size: 12px;
+      }
+    }
+    &__text {
+      margin-bottom: 20px;
+      p {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &__characts {
+      justify-content: flex-start;
+      flex-direction: column;
+      .colors {
+        img {
+          width: 32px;
+          height: 32px;
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    &__nav {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    /* product block */
+    &__block {
+      justify-content: flex-start;
+      flex-direction: column;
+      .col {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__benefits {
+      padding: 20px 10px;
+      gap: 20px 10px;
+      .benefit-head {
+        font-size: 16px;
+      }
+    }
+    &__points {
+      padding: 20px 10px;
+    }
+    &__delivery {
+      .row {
+        justify-content: flex-start;
+        flex-direction: column;
+        .delivery-card {
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    &__details {
+      padding: 20px 10px;
+    }
+    &__obzor {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+      padding-top: 70px;
+      margin-bottom: 70px;
+      .col {
+        .default-wrapper {
+          .title-1 {
+            margin: 0;
+            span {
+              display: inline;
+              &:nth-child(2) {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-about {
+      .tabs-style .tabs-nav {
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        a.active {
+          font-size: 17px;
+        }
+      }
+      .tabs-item {
+        .title-1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        .row {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .heading-row {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 0;
+          margin-bottom: 20px;
+          div {
+            p {
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .loochs-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    &::before {
+      display: none;
+    }
+    .item {
+      img {
+        width: 90px;
+        height: 60px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
+  .point {
+    padding: 16px 0;
+    font-size: 16px;
+  }
+  .steps__cards {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .stepcard {
+      flex-wrap: wrap;
+      padding: 20px 10px;
+      &-numb {
+        margin-right: 10px;
+        width: 40px;
+        font-size: 18px;
+      }
+      &-title {
+        margin: 0;
+        width: calc(100% - 50px);
+        font-size: 18px;
+      }
+      &-text {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 16px;
+      }
+  }
+  .prodconsult {
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px 10px 24px 10px;
+    .col {
+      &:nth-child(1) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
+  }
+  .form-consult {
+    .form-group {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include mobile {
+  .product {
+    &__benefits {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+    &-about {
+      .tabs-style .tabs-nav {
+        a.active {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
