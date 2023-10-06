@@ -158,4 +158,257 @@
       margin-bottom: 16px;
     }
   }
+  &-bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    .link {
+      margin-left: auto;
+    }
+    .link-withicon {
+      margin-bottom: 28px;
+    }
+  }
+  .desktop-hidden {
+    display: none;
+  }
+}
+.orders {
+  &__list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    .row {
+      margin-bottom: 18px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--font-color);
+      span {
+        font-weight: 500;
+        margin-right: 8px;
+      }
+    }
+    .link-withicon {
+      margin-bottom: 18px;
+    }
+    &:not(:last-child) {
+      padding-bottom: 36px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid #A7A7A7;
+    }
+  }
+}
+.order {
+  &__info {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 36px;
+    &-item {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #A7A7A7;
+      width: 100%;
+      h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--font-color);
+      }
+      p {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--font-color);
+      }
+    }
+    .row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 8px;
+      &:last-child {
+        .col {
+          font-weight: 700;
+        }
+      }
+      .col {
+        font-size: 14px;
+        font-weight: 400;
+        &:nth-child(2) {
+          font-size: 16px;
+          text-align: right;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .lk {
+    .orders-table,
+    .order-table {
+      display: none;
+    }
+    .orders__list,
+    .order__info {
+      display: flex;
+    }
+    .desktop-hidden {
+      display: flex;
+    }
+    .mob-hidden {
+      display: none;
+    }
+    &-section {
+      &:not(:last-child) {
+        margin-bottom: 70px;
+      }
+    }
+    &-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-bottom: 30px;
+      gap: 14px;
+    }
+    &-title {
+      font-size: 30px;
+    }
+    &-text {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    &-main {
+      &-cards {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      &card {
+        padding: 30px 20px;
+        min-height: auto;
+        &-title {
+          margin-bottom: 20px;
+          font-size: 18px;
+          line-height: 20px;
+          img {
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+          }
+        }
+        &-text {
+          margin-bottom: 28px;
+          font-size: 16px;
+        }
+      }
+    }
+    .text-row {
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-bottom: 30px;
+      .col {
+        width: 100%;
+        &:nth-child(1) {
+          margin-bottom: 18px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+    .logo-row {
+      img {
+        &:not(:last-child) {
+          margin-right: 36px;
+        }
+      }
+    }
+    &__contacts {
+      justify-content: flex-start;
+      flex-direction: column;
+      .col {
+        width: 100%;
+        &:nth-child(1) {
+          margin-bottom: 16px;
+        }
+        .row {
+          .contacts-item:not(:last-child) {
+            margin-right: 36px;
+          }
+        }
+      }
+    }
+    &-delivery {
+      &-cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+      }
+      &card {
+        padding: 30px 20px;
+        min-height: auto;
+        h4 {
+          margin-bottom: 20px;
+          font-size: 16px;
+        }
+        p {
+          font-size: 16px;
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .form {
+      &-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .lk {
+    &-title {
+      font-size: 24px;
+    }
+    &-text {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+    &-main {
+      &card {
+        padding: 20px 10px;
+      }
+    }
+    &-delivery {
+      &card {
+        padding: 20px 10px;
+      }
+    }
+    .logo-row {
+      img {
+        max-height: 44px;
+      }
+    }
+  }
 }
