@@ -79,6 +79,10 @@
 .withit,
 .canlike,
 .recent {
+  .default-wrapper {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   .title-1 {
     span {
       display: block;
@@ -107,6 +111,14 @@
     margin-left: 40px;
     span {
       margin-left: 60px;
+    }
+  }
+}
+
+.canlike {
+  .default-wrapper {
+    .link {
+      margin-top: 24px;
     }
   }
 }
@@ -255,6 +267,12 @@
   .sticky, .stop {
     position: relative !important;
     top: auto !important;
-
+  }
+  .canlike {
+    .default-wrapper {
+      .link {
+        order: 1;
+      }
+    }
   }
 }

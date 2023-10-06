@@ -2,7 +2,7 @@
   &-wrapper {
     position: fixed;
     top: 0;right: 0;bottom: 0;
-    padding-top: 40px;
+    padding-top: 56px;
     padding-bottom: 40px;
     width: 380px;
     max-width: 100%;
@@ -104,6 +104,7 @@
       justify-content: space-between;
       width: 100%;
       margin-top: 20px;
+      font-size: 17px;
       .col {
         &:first-child {
           margin-right: 12px;
@@ -161,5 +162,75 @@
     background-color: #000;
     opacity: .5;
     z-index: 999998;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .cartbar {
+    &-wrapper {
+      padding-top: 48px;
+      width: 310px;
+    }
+    &-group,
+    &-head {
+      padding: 18px 10px;
+      .row {
+        .col {
+          font-size: 16px;
+        }
+      }
+    }
+    &-head {
+      padding-top: 0;
+    }
+    &-card {
+      padding: 18px 10px;
+      &-remove {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+      }
+      &-img {
+        top: 18px;
+        left: 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+      }
+      &-info {
+        padding-top: 0;
+        padding-left: 70px;
+        min-height: 60px;
+        font-size: 13px;
+      }
+      &-name {
+        margin-bottom: 10px;
+      }
+      &-total {
+        margin-top: 14px;
+        font-size: 16px;
+        .col {
+          &:first-child {
+            margin-right: 8px;
+          }
+          &:last-child {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+    &-btns {
+      padding: 18px 10px 16px 10px;
+      .link-withicon:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &-close {
+      top: 5px;
+      right: 5px;
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+    }
   }
 }

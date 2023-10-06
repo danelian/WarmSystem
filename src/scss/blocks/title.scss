@@ -106,13 +106,9 @@
 
 @include tablet {
 	.heading-row {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
+		justify-content: flex-start;
+		flex-direction: column;
 		margin-bottom: 40px;
-		.link {
-			margin-top: 16px;
-		}
 	}
 	.section-text {
 		font-size: 16px;
@@ -145,6 +141,9 @@
 }
 
 @include mobile {
+	.heading-row {
+		margin-bottom: 24px;
+	}
 	.default-wrapper,
 	.default-wrapper-dark {
 		padding: 24px 10px;

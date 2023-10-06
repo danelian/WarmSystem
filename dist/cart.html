@@ -95,7 +95,7 @@
       </div>
       <form class="woocommerce-cart-form cart-cards">
         <div class="cart-card woocommerce-cart-form__cart-item cart_item">
-          <a href="#" class="cart-card-remove"><i class="icomoon icon-remove"></i>Удалить</a>
+          <a href="#" class="cart-card-remove"><i class="icomoon icon-remove"></i><span>Удалить</span></a>
           <div class="product-thumbnail cart-card-img">
             <a href="#"><img width="150" height="150" src="img/cart-card-img.png" class="woocommerce-placeholder wp-post-image ls-is-cached lazyloaded"></a>
           </div>
@@ -107,6 +107,11 @@
               </div>
             </div>
             <div class="cart-card-total">
+              <div class="col desktop-hidden">
+                <span class="woocommerce-Price-amount amount">
+                  <bdi>24,10&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
+                </span>
+              </div>
               <div class="col">
                 <div class="quantity">
                   <input type="number" name="quantity" value="1" min="1" max="" step="1" placeholder="" inputmode="numeric">
@@ -118,7 +123,7 @@
               </div>
               <div class="col">
                 <div class="cart-card-total-price">
-                  <span>3x 
+                  <span class="mob-hidden">3x 
                     <span class="woocommerce-Price-amount amount">
                       <bdi>24,10&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                     </span>
@@ -132,7 +137,7 @@
           </div>
         </div>
         <div class="cart-card woocommerce-cart-form__cart-item cart_item">
-          <a href="#" class="cart-card-remove"><i class="icomoon icon-remove"></i>Удалить</a>
+          <a href="#" class="cart-card-remove"><i class="icomoon icon-remove"></i><span>Удалить</span></a>
           <div class="product-thumbnail cart-card-img">
             <a href="#"><img width="150" height="150" src="img/cart-card-img.png" class="woocommerce-placeholder wp-post-image ls-is-cached lazyloaded"></a>
           </div>
@@ -144,6 +149,11 @@
               </div>
             </div>
             <div class="cart-card-total">
+              <div class="col desktop-hidden">
+                <span class="woocommerce-Price-amount amount">
+                  <bdi>24,10&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
+                </span>
+              </div>
               <div class="col">
                 <div class="quantity">
                   <input type="number" name="quantity" value="1" min="1" max="" step="1" placeholder="" inputmode="numeric">
@@ -155,7 +165,7 @@
               </div>
               <div class="col">
                 <div class="cart-card-total-price">
-                  <span>3x 
+                  <span class="mob-hidden">3x 
                     <span class="woocommerce-Price-amount amount">
                       <bdi>24,10&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></bdi>
                     </span>
@@ -169,7 +179,7 @@
           </div>
         </div>
       </form>
-      <div class="cart-collaterals cart-bottom">
+      <div class="cart-bottom">
         <div class="cart_totals">
           <div class="row">
             <div class="col">Сумма:</div>
@@ -199,8 +209,8 @@
         <div class="heading">
             <h2 class="title-1">Вам может <span>понравиться</span></h2>
             <p class="section-text">Эти модели заслуженно имеют высокую оценку покупателей</p>
-            <a href="catalog.html" class="link">Перейти в каталог</a>
         </div>
+        <a href="catalog.html" class="link">Перейти в каталог</a>
         <!-- Swiper -->
         <div class="swiper canlikeSwiper">
           <div class="swiper-nav">
