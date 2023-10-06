@@ -5605,8 +5605,7 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0 auto;
   z-index: 1;
 }
-.errorpage__container::before {
-  content: "";
+.errorpage__container .imgs img:nth-child(1) {
   position: absolute;
   left: 0;
   top: 20px;
@@ -5614,11 +5613,9 @@ input[type=number]::-webkit-inner-spin-button {
   height: 165px;
   border-radius: var(--border-radius);
   object-fit: cover;
-  background-image: url("../img/errorpage-img-01.jpg");
   z-index: -1;
 }
-.errorpage__container::after {
-  content: "";
+.errorpage__container .imgs img:nth-child(2) {
   position: absolute;
   right: 110px;
   bottom: 0;
@@ -5626,7 +5623,6 @@ input[type=number]::-webkit-inner-spin-button {
   height: 165px;
   border-radius: var(--border-radius);
   object-fit: cover;
-  background-image: url("../img/errorpage-img-02.jpg");
   z-index: -1;
 }
 .errorpage__container span {
@@ -5645,6 +5641,85 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 1024px) {
+  .paymentbl .default-wrapper,
+.deliverybl .default-wrapper,
+.warrantybl .default-wrapper,
+.orderbl .default-wrapper {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+  .paymentbl .default-wrapper .heading,
+.deliverybl .default-wrapper .heading,
+.warrantybl .default-wrapper .heading,
+.orderbl .default-wrapper .heading {
+    margin-bottom: 20px;
+  }
+  .paymentbl .default-wrapper .heading .title-1,
+.deliverybl .default-wrapper .heading .title-1,
+.warrantybl .default-wrapper .heading .title-1,
+.orderbl .default-wrapper .heading .title-1 {
+    margin-bottom: 14px;
+  }
+  .paymentbl__container,
+.warrantybl__container {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .paymentbl__container .col,
+.warrantybl__container .col {
+    width: 100%;
+  }
+  .paymentbl__container .col:nth-child(1),
+.warrantybl__container .col:nth-child(1) {
+    margin-bottom: 24px;
+  }
+  .paymentbl__container .col p:not(:last-child),
+.warrantybl__container .col p:not(:last-child) {
+    margin-bottom: 0.7rem;
+  }
+  .deliverybl__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .deliverybl .delivery-card-content {
+    padding: 20px 10px;
+  }
+  .deliverybl .delivery-card-content p {
+    font-size: 16px;
+  }
+  .orderbl .heading {
+    width: 100%;
+  }
+  .orderbl__cards {
+    row-gap: 28px;
+  }
+  .orderbl__cards .step {
+    width: 100%;
+  }
+  .orderbl__cards .step:nth-child(odd) {
+    margin-right: 0;
+  }
+  .orderbl__cards .step:nth-child(1), .orderbl__cards .step:nth-child(2) {
+    margin-right: 0;
+  }
+  .orderbl__img {
+    margin-top: 20px;
+    position: relative;
+    order: 1;
+    top: auto;
+    right: auto;
+    width: 100%;
+  }
+  .payment-logos {
+    max-width: 100%;
+    margin: 0;
+  }
+  .payment-logos img {
+    height: 28px;
+    margin-left: 0;
+    margin-right: 30px;
+  }
   .delivery-card {
     font-size: 16px;
   }
@@ -5662,6 +5737,53 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .delivery-card-content p {
     font-size: 16px;
+  }
+  .errorpage__container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 860px;
+    min-height: auto;
+    margin: 0;
+  }
+  .errorpage__container .imgs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .errorpage__container .imgs img:nth-child(1) {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+  }
+  .errorpage__container .imgs img:nth-child(2) {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+  }
+  .errorpage__container span {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .errorpage__container .title-1 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .errorpage__container .imgs img:nth-child(1), .errorpage__container .imgs img:nth-child(2) {
+    height: 130px;
+  }
+  .errorpage__container span {
+    font-size: 16px;
+  }
+  .errorpage__container .title-1 {
+    font-size: 24px;
   }
 }
 .cartbar-wrapper {

@@ -203,27 +203,27 @@
     min-height: 360px;
     margin: 0 auto;
     z-index: 1;
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;top: 20px;
-      width: 260px;
-      height: 165px;
-      border-radius: var(--border-radius);
-      object-fit: cover;
-      background-image: url('../img/errorpage-img-01.jpg');
-      z-index: -1;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      right: 110px;bottom: 0;
-      width: 140px;
-      height: 165px;
-      border-radius: var(--border-radius);
-      object-fit: cover;
-      background-image: url('../img/errorpage-img-02.jpg');
-      z-index: -1;
+    .imgs {
+      img {
+        &:nth-child(1) {
+          position: absolute;
+          left: 0;top: 20px;
+          width: 260px;
+          height: 165px;
+          border-radius: var(--border-radius);
+          object-fit: cover;
+          z-index: -1;
+        }
+        &:nth-child(2) {
+          position: absolute;
+          right: 110px;bottom: 0;
+          width: 140px;
+          height: 165px;
+          border-radius: var(--border-radius);
+          object-fit: cover;
+          z-index: -1;
+        }
+      }
     }
     span {
       display: block;
@@ -243,6 +243,89 @@
 }
 
 @include tablet {
+  .paymentbl,
+  .deliverybl,
+  .warrantybl,
+  .orderbl {
+    .default-wrapper {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      font-size: 16px;
+      .heading {
+        margin-bottom: 20px;
+        .title-1 {
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+  .paymentbl,
+  .warrantybl {
+    &__container {
+      justify-content: flex-start;
+      flex-direction: column;
+      .col {
+        width: 100%;
+        &:nth-child(1) {
+          margin-bottom: 24px;
+        }
+        p {
+          &:not(:last-child) {
+            margin-bottom: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+  .deliverybl {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+    .delivery-card {
+      &-content {
+        padding: 20px 10px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .orderbl {
+    .heading {
+      width: 100%;
+    }
+    &__cards {
+      row-gap: 28px;
+      .step {
+        width: 100%;
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+      }
+    }
+    &__img {
+      margin-top: 20px;
+      position: relative;
+      order: 1;
+      top: auto;
+      right: auto;
+      width: 100%;
+    }
+  }
+  .payment-logos {
+    max-width: 100%;
+    margin: 0;
+    img {
+      height: 28px;
+      margin-left: 0;
+      margin-right: 30px;
+    }
+  }
   .delivery-card {
     font-size: 16px;
     &-head {
@@ -257,6 +340,65 @@
       padding: 20px 10px;
       p {
         font-size: 16px;
+      }
+    }
+  }
+  .errorpage {
+    &__container {
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 860px;
+      min-height: auto;
+      margin: 0;
+      .imgs {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+        width: 100%;
+        margin-top: 30px;
+        img {
+          &:nth-child(1) {
+            position: relative;
+            left: auto;top: auto;
+            width: 100%;
+            height: auto;
+          }
+          &:nth-child(2) {
+            position: relative;
+            right: auto;top: auto;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      span {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .title-1 {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .errorpage {
+    &__container {
+      .imgs {
+        img {
+          &:nth-child(1),
+          &:nth-child(2) {
+            height: 130px;
+          }
+        }
+      }
+      span {
+        font-size: 16px;
+      }
+      .title-1 {
+        font-size: 24px;
       }
     }
   }
