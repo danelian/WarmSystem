@@ -337,6 +337,7 @@ var productSecond = new Swiper(".productSecond", {
 		},
 		1024: {
 			direction: "vertical",
+			slidesPerView: 'auto',
 		},
 	}
 });

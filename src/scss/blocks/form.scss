@@ -194,6 +194,12 @@
 		font-size: 15px;
 		line-height: 18px;
 		color: var(--font-color);
+		a {
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 18px;
+			color: var(--font-color);
+		}
 	}
 	span:before {
 		content: "";

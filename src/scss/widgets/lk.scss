@@ -168,7 +168,8 @@
     .link {
       margin-left: auto;
     }
-    .link-withicon {
+    .link-withicon,
+    .download-link {
       margin-bottom: 28px;
     }
   }
@@ -200,7 +201,8 @@
         margin-right: 8px;
       }
     }
-    .link-withicon {
+    .link-withicon,
+    .download-link {
       margin-bottom: 18px;
     }
     &:not(:last-child) {
@@ -348,7 +350,15 @@
       .col {
         width: 100%;
         &:nth-child(1) {
-          margin-bottom: 16px;
+          margin-bottom: 20px;
+          padding-bottom: 18px;
+          border-bottom: 1px solid #545462;
+        }
+        &:nth-child(2) {
+          &>.contacts-item {
+            padding-bottom: 18px;
+            border-bottom: 1px solid #545462;
+          }
         }
         .row {
           .contacts-item:not(:last-child) {

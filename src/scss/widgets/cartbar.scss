@@ -43,6 +43,12 @@
   &-head {
     padding-top: 0;
   }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-input {
+    background: var(--lightGrey-color);
+  }
   &-card {
     position: relative;
     width: 100%;
@@ -162,6 +168,25 @@
     background-color: #000;
     opacity: .5;
     z-index: 999998;
+  }
+}
+
+.promocode-form {
+  position: relative;
+  .btn-reset {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #C8C8C8;
+    i {
+      font-size: 16px;
+    }
+    &:hover {
+      color: var(--font-color);
+    }
   }
 }
 
