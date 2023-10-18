@@ -94,7 +94,8 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    img {
+    row-gap: 20px;
+    a {
       &:not(:last-child) {
         margin-right: 48px;
       }
@@ -338,7 +339,7 @@
       }
     }
     .logo-row {
-      img {
+      a {
         &:not(:last-child) {
           margin-right: 36px;
         }

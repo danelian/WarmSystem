@@ -256,6 +256,30 @@ var recomSwiper = new Swiper('.recomSwiper', {
 		type: 'fraction',
 	},
 });
+for (var i = 1; i <= recomSwiper.slides.length; i++){
+  if ( i === 1){
+    $('.recomSwiper .swiper-pagination-bullets').append('<span class="swiper-pagination-bullet' + ' ' + 'swiper-pagination-bullet-active' + ' ' + 'slide' + i + '"></span>');
+  } else {
+    $('.recomSwiper .swiper-pagination-bullets').append('<span class="swiper-pagination-bullet' + ' ' + 'slide' + i + '"></span>');
+  }
+  $('.recomSwiper .swiper-pagination-bullets .slide' + i).on('click', function(){
+    var index = $(this).index();
+    recomSwiper.slideTo(index);
+  });
+}
+var bullets = $('.swiper-pagination-bullet');
+recomSwiper.on('slideChange', function () {
+	var slide = "slide"+($('.swiper-pagination-current').html());
+	bullets.removeClass("swiper-pagination-bullet-active");
+	$.each(bullets, function (index, value) {
+		if($(this).hasClass(slide)) {
+			$(this).addClass("swiper-pagination-bullet-active");
+			return false;
+		}
+	});
+});
+
+
 var reviewsSwiper = new Swiper('.reviewsSwiper', {
 	slidesPerView: 1,
 	// loop: true,
@@ -280,6 +304,31 @@ var reviewsSwiper = new Swiper('.reviewsSwiper', {
 		},
 	}
 });
+for (var i = 1; i <= reviewsSwiper.slides.length; i++){
+  if ( i === 1){
+    $('.reviewsSwiper .swiper-pagination-bullets').append('<span class="swiper-pagination-bullet' + ' ' + 'swiper-pagination-bullet-active' + ' ' + 'slide' + i + '"></span>');
+  } else {
+    $('.reviewsSwiper .swiper-pagination-bullets').append('<span class="swiper-pagination-bullet' + ' ' + 'slide' + i + '"></span>');
+  }
+  $('.reviewsSwiper .swiper-pagination-bullets .slide' + i).on('click', function(){
+    var index = $(this).index();
+    reviewsSwiper.slideTo(index);
+  });
+}
+var reviewsBullets = $('.swiper-pagination-bullet');
+reviewsSwiper.on('slideChange', function () {
+	var slide = "slide"+($('.swiper-pagination-current').html());
+	reviewsBullets.removeClass("swiper-pagination-bullet-active");
+	$.each(reviewsBullets, function (index, value) {
+		if($(this).hasClass(slide)) {
+			$(this).addClass("swiper-pagination-bullet-active");
+			return false;
+		}
+	});
+});
+
+
+
 var popularSwiper = new Swiper(".popularSwiper, .withitSwiper, .canlikeSwiper, .recentSwiper", {
 	spaceBetween: 10,
 	slidesPerView: 1,

@@ -10,7 +10,7 @@
 @font-face {
   font-family: "Montserrat-Extrabold";
   font-display: swap;
-  src: url("../fonts/Montserrat-Extrabold.woff2") format("woff2"), url("../fonts/Montserrat-Extrabold.woff") format("woff");
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
@@ -45,7 +45,7 @@
 /***** GENERAL ELEMENTS *****/
 :root {
   --font-family: "Comfortaa", sans-serif;
-  --font-montserrat: "Montserrat-Extrabold", "Comfortaa", sans-serif;
+  --font-montserrat: "Montserrat-Extrabold", sans-serif;
   --content-width: 1160px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -2835,6 +2835,14 @@ input[type=number]::-webkit-inner-spin-button {
 .canlikeSwiper .swiper-button-next::after,
 .recentSwiper .swiper-button-prev::after,
 .recentSwiper .swiper-button-next::after {
+  color: var(--font-color);
+}
+.withitSwiper .swiper-button-prev:hover::after,
+.withitSwiper .swiper-button-next:hover::after,
+.canlikeSwiper .swiper-button-prev:hover::after,
+.canlikeSwiper .swiper-button-next:hover::after,
+.recentSwiper .swiper-button-prev:hover::after,
+.recentSwiper .swiper-button-next:hover::after {
   color: var(--global-color);
 }
 
@@ -6627,8 +6635,9 @@ input[type=number]::-webkit-inner-spin-button {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  row-gap: 20px;
 }
-.lk .logo-row img:not(:last-child) {
+.lk .logo-row a:not(:last-child) {
   margin-right: 48px;
 }
 .lk__contacts {
@@ -6854,7 +6863,7 @@ input[type=number]::-webkit-inner-spin-button {
   .lk .text-row .col p {
     font-size: 16px;
   }
-  .lk .logo-row img:not(:last-child) {
+  .lk .logo-row a:not(:last-child) {
     margin-right: 36px;
   }
   .lk__contacts {

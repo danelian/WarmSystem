@@ -94,6 +94,10 @@
     }
     .swiper-button-prev::after,
     .swiper-button-next::after {
+      color: var(--font-color);
+    }
+    .swiper-button-prev:hover::after,
+    .swiper-button-next:hover::after {
       color: var(--global-color);
     }
   }
