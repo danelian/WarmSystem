@@ -142,6 +142,21 @@
   }
 }
 
+@media screen and (min-width: 1190px) {
+  .teamSwiper {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+    margin-right: -20px;
+    padding-right: 20px;
+    .swiper-slide {
+      width: 330px;
+      &-active {
+        width: 420px;
+      }
+    }
+  }
+}
+
 @include tablet {
   .contacts {
     .page-heading {

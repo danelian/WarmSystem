@@ -127,6 +127,25 @@
   }
 }
 
+@media screen and (min-width: 1190px) {
+  .popularSwiper, .withitSwiper, .canlikeSwiper, .recentSwiper {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+    margin-right: -20px;
+    padding-right: 20px;
+    .swiper-slide {
+      width: 300px;
+      &-next {
+        width: 390px;
+        margin-top: -36px;
+        .card-img {
+          aspect-ratio: 37 / 26;
+        }
+      }
+    }
+  }
+}
+
 /* изменение вида блока на странице корзины */
 .woocommerce-cart {
   .canlike .heading {

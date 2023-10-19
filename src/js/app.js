@@ -347,6 +347,9 @@ var popularSwiper = new Swiper(".popularSwiper, .withitSwiper, .canlikeSwiper, .
 		992: {
 			slidesPerView: 3,
 		},
+		1190: {
+			slidesPerView: "auto",
+		},
 	}
 });
 var teamSwiper = new Swiper(".teamSwiper", {

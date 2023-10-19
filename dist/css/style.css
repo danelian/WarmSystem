@@ -2863,6 +2863,24 @@ input[type=number]::-webkit-inner-spin-button {
   margin-top: 24px;
 }
 
+@media screen and (min-width: 1190px) {
+  .popularSwiper, .withitSwiper, .canlikeSwiper, .recentSwiper {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+  .popularSwiper .swiper-slide, .withitSwiper .swiper-slide, .canlikeSwiper .swiper-slide, .recentSwiper .swiper-slide {
+    width: 300px;
+  }
+  .popularSwiper .swiper-slide-next, .withitSwiper .swiper-slide-next, .canlikeSwiper .swiper-slide-next, .recentSwiper .swiper-slide-next {
+    width: 390px;
+    margin-top: -36px;
+  }
+  .popularSwiper .swiper-slide-next .card-img, .withitSwiper .swiper-slide-next .card-img, .canlikeSwiper .swiper-slide-next .card-img, .recentSwiper .swiper-slide-next .card-img {
+    aspect-ratio: 37/26;
+  }
+}
 /* изменение вида блока на странице корзины */
 .woocommerce-cart .canlike .heading .title-1 span {
   margin-left: 0;
@@ -3606,6 +3624,11 @@ input[type=number]::-webkit-inner-spin-button {
   .special .default-wrapper p,
 .special .default-wrapper-dark p {
     margin-top: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .mob-link-nounderline::before {
+    display: none;
   }
 }
 .review {
@@ -5454,6 +5477,20 @@ input[type=number]::-webkit-inner-spin-button {
   color: #989898;
 }
 
+@media screen and (min-width: 1190px) {
+  .teamSwiper {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+  .teamSwiper .swiper-slide {
+    width: 330px;
+  }
+  .teamSwiper .swiper-slide-active {
+    width: 420px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .contacts .page-heading {
     margin-bottom: 30px;
