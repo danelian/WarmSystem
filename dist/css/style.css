@@ -3068,9 +3068,23 @@ input[type=number]::-webkit-inner-spin-button {
 .hero__img {
   margin-top: 60px;
   width: 100%;
+  object-fit: cover;
   border-radius: var(--border-radius);
 }
 
+@media screen and (min-width: 1190px) {
+  .hero {
+    min-height: 540px;
+    height: 780px;
+  }
+  .hero__img {
+    position: relative;
+    width: 1160px !important;
+    height: 540px !important;
+    z-index: -1 !important;
+    transition: transform 0.3s ease-out;
+  }
+}
 .element-animation {
   opacity: 0;
 }
@@ -5478,17 +5492,15 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 @media screen and (min-width: 1190px) {
-  .teamSwiper {
-    width: calc(100% + 20px);
-    max-width: calc(100% + 20px);
-    margin-right: -20px;
-    padding-right: 20px;
-  }
   .teamSwiper .swiper-slide {
-    width: 330px;
+    transition: all 0.5s ease;
+    padding: 40px 0;
   }
   .teamSwiper .swiper-slide-active {
-    width: 420px;
+    transform: scale(1.22);
+  }
+  .teamSwiper .swiper-slide-active .teamcard {
+    padding-bottom: 12px;
   }
 }
 @media screen and (max-width: 1024px) {

@@ -51,10 +51,24 @@
   &__img {
     margin-top: 60px;
     width: 100%;
+    object-fit: cover;
     border-radius: var(--border-radius);
   }
 }
 
+@media screen and (min-width: 1190px) {
+  .hero {
+    min-height: 540px;
+    height: 780px;
+    &__img {
+      position: relative;
+      width: 1160px !important;
+      height: 540px !important;
+      z-index: -1 !important;
+      transition: transform 0.3s ease-out;
+    }
+  }
+}
 
 .element-animation {
   opacity: 0;

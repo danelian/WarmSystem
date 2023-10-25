@@ -355,7 +355,9 @@ var popularSwiper = new Swiper(".popularSwiper, .withitSwiper, .canlikeSwiper, .
 var teamSwiper = new Swiper(".teamSwiper", {
 	spaceBetween: 20,
 	slidesPerView: 1,
-	// loop: true,
+	loop: true,
+	centeredSlides: true,
+	speed: 1000,
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
@@ -370,6 +372,10 @@ var teamSwiper = new Swiper(".teamSwiper", {
 		992: {
 			slidesPerView: 3,
 		},
+		1190: {
+			slidesPerView: 3,
+			spaceBetween: 60,
+		}
 	}
 });
 

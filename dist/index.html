@@ -95,6 +95,28 @@
     <img src="img/hero-img.jpg" class="hero__img" alt="">
   </div>
 </section>
+
+<script>
+  if (window.innerWidth >= 1190) { 
+    const heroImg = document.querySelector('.hero__img');
+    const heroSection = document.querySelector('.hero');
+
+    window.addEventListener('scroll', function() {
+      const heroTop = heroSection.getBoundingClientRect().top;
+
+      if (heroTop <= 0) {
+        heroImg.classList.add('absolute');
+        setTimeout(function() {
+          heroImg.style.transform = "translateY(-100px)";
+        }, 500);
+        window.removeEventListener('scroll', arguments.callee);
+      } else {
+        const translateY = Math.max(0, 100 - heroTop);
+        heroImg.style.transform = "translateY(-" + translateY + "px)";
+      }
+    });
+  }
+</script>
 		<section class="recom">
   <div class="container">
     <div class="default-wrapper-dark">
