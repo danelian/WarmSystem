@@ -430,7 +430,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
   flex-shrink: 0;
+  padding-right: 32px;
+  width: fit-content;
+  min-width: 80px;
   input {
     padding: 10px 4px;
     width: 48px;
@@ -443,21 +447,26 @@
     border-radius: 5px;
     background: var(--lightGrey-color);
   }
-  &-btns {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    button {
-      width: 22px;
-      height: 22px;
-      font-size: 26px;
-      color: var(--global-color);
-    }
-  }
   &-plus {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 22px;
+    height: 22px;
+    font-size: 26px;
+    color: var(--global-color);
     i {
       transform: rotate(180deg);
     }
+  }
+  &-minus {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 22px;
+    height: 22px;
+    font-size: 26px;
+    color: var(--global-color);
   }
 }
 

@@ -153,7 +153,14 @@
   justify-content: flex-start;
   img {
     opacity: .3;
+    transition: opacity .3s ease;
     cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    &.current {
+      opacity: 1;
+    }
   }
 }
 

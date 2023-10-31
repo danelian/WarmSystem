@@ -196,21 +196,21 @@
           <div class="item">
             <div class="title">Цвет</div>
             <div class="colors">
-              <img src="img/colors/color-01.jpg" class="current" alt="">
-              <img src="img/colors/color-02.jpg" alt="">
-              <img src="img/colors/color-03.jpg" alt="">
-              <img src="img/colors/color-04.jpg" alt="">
-              <img src="img/colors/color-05.jpg" alt="">
+              <img src="img/colors/color-01.jpg" alt="" data-color="color-01">
+              <img src="img/colors/color-02.jpg" alt="" data-color="color-02">
+              <img src="img/colors/color-03.jpg" alt="" data-color="color-03">
+              <img src="img/colors/color-04.jpg" alt="" data-color="color-04">
+              <img src="img/colors/color-05.jpg" alt="" data-color="color-05">
             </div>
+            <input type="hidden" name="selectedColor">
           </div>
           <div class="item">
             <div class="title">Количество</div>
             <div class="quantity">
-              <input type="number" name="quantity" value="1" min="1" max="" step="1" placeholder="" inputmode="numeric">
-              <div class="quantity-btns">
+              <label class="screen-reader-text" for="quantity_productid1">Керамический обогреватель FLYME 450P</label>
+              <input type="number" id="quantity_productid1" class="input-text qty text" name="quantity" value="1" aria-label="Product quantity" size="4" min="1" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                 <button class="btn-reset quantity-plus"><i class="icomoon icon-chevron"></i></button>
                 <button class="btn-reset quantity-minus"><i class="icomoon icon-chevron"></i></button>
-              </div>
             </div>
           </div>
         </div>
@@ -1385,8 +1385,8 @@
       <input type="password" class="form-input" placeholder="Пароль">
     </div>
     <div class="form-group">
-      <label for="politika" class="checkbox">
-        <input type="checkbox" id="politika"><span>Я согласен с условиями <a href="#">политики конфиденциальности</a></span>
+      <label for="politikaRegister" class="checkbox">
+        <input type="checkbox" id="politikaRegister"><span>Я согласен с условиями <a href="#">политики конфиденциальности</a></span>
       </label>
     </div>
     <div class="form-group">

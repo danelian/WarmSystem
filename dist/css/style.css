@@ -3791,7 +3791,14 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .rating-btns img {
   opacity: 0.3;
+  transition: opacity 0.3s ease;
   cursor: pointer;
+}
+.rating-btns img:hover {
+  opacity: 1;
+}
+.rating-btns img.current {
+  opacity: 1;
 }
 
 .reviews .desktop-hidden {
@@ -4239,6 +4246,11 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .catalog__sidebar-item-open .catalog__sidebar-title::before {
   transform: rotate(-90deg);
+}
+.catalog__sidebar-body {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.25s ease;
 }
 .catalog__sidebar-body .checkbox {
   margin-bottom: 0;
@@ -4874,7 +4886,11 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
   flex-shrink: 0;
+  padding-right: 32px;
+  width: fit-content;
+  min-width: 80px;
 }
 .quantity input {
   padding: 10px 4px;
@@ -4889,12 +4905,10 @@ input[type=number]::-webkit-inner-spin-button {
   border-radius: 5px;
   background: var(--lightGrey-color);
 }
-.quantity-btns {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-}
-.quantity-btns button {
+.quantity-plus {
+  position: absolute;
+  right: 0;
+  top: -2px;
   width: 22px;
   height: 22px;
   font-size: 26px;
@@ -4902,6 +4916,15 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .quantity-plus i {
   transform: rotate(180deg);
+}
+.quantity-minus {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  width: 22px;
+  height: 22px;
+  font-size: 26px;
+  color: var(--global-color);
 }
 
 @media screen and (max-width: 1024px) {
