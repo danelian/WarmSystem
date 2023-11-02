@@ -274,6 +274,32 @@ $(document).ready(function () {
     }
   )
 
+  // -------------------- SIDEBAR PRICE -------------------------
+  $(function() {
+    $("#sidebarPrice").slider({
+      range: true,
+      min: 0,
+      max: 9999,
+      values: [0, 9999],
+      slide: function(event, ui) {
+        $("#sidebarPrice-min").val(ui.values[0].toFixed(2));
+        $("#sidebarPrice-max").val(ui.values[1].toFixed(2));
+      }
+    });
+  
+    $("#sidebarPrice-min").on("change", function() {
+      var value1 = $("#sidebarPrice-min").val();
+      var value2 = $("#sidebarPrice-max").val();
+      $("#sidebarPrice").slider("values", 0, value1);
+    });
+  
+    $("#sidebarPrice-max").on("change", function() {
+      var value1 = $("#sidebarPrice-min").val();
+      var value2 = $("#sidebarPrice-max").val();
+      $("#sidebarPrice").slider("values", 1, value2);
+    });
+  });
+
   // -------------------- STARS -------------------------
   var selectedStars = 0
   jQuery('.star').on('click', function () {

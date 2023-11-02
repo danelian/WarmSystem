@@ -321,46 +321,6 @@ input[type="number"]::-webkit-inner-spin-button {
 	display: none;
 }
 
-.range {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 20px;
-  margin-top: 20px;
-	&-line {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 50%;
-		margin-top: -1px;
-		width: 100%;
-		height: 2px;
-		background: #E1E1E1;
-	}
-	&-button {
-		content: "";
-		position: absolute;
-		top: 0;
-		width: 20px;
-		height: 20px;
-		border-radius: 20px;
-		border: 1px solid #292932;
-		background: var(--grey-color);
-		z-index: 2;
-		cursor: pointer;
-		transition: .3s ease;
-	}
-	&-button:hover {
-		border-color: transparent;
-	}
-	&-button-min {
-		left: 0;
-	}
-	&-button-max {
-		right: 0;
-	}
-}
-
 
 .select2 {
 	width: auto !important;
